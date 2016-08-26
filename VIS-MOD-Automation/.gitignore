@@ -1,0 +1,9 @@
+PageObjects/obj/
+PageObjects/bin/
+SeleniumUtils/obj/
+SeleniumUtils/bin/
+StepDefinitions/obj/
+StepDefinitions/bin/
+Tests/obj/
+Tests/bin/
+.vs/
