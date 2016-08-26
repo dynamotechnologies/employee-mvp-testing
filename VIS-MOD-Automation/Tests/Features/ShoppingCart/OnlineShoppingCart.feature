@@ -1,5 +1,4 @@
 ﻿Feature: Online Shopping Cart
-
 	1. Register New User with Email Address
 		a. Navigate to the Online Shopping Cart (OSC) and verify login page
 		b. Register using Email Address
@@ -100,7 +99,7 @@ Scenario: 001-Register new user with Email Address
 	And I click on the submit button labeled "Sign up"
 	# Then the page contains the text "Catalog"
 
-Scenario: 002-Login with valid credentials
+Scenario: 01-Login with valid credentials
 	Given I navigate to the url "http://qa01.cloud.capitissolutions.com/users/sign_in" titled "ShoppingDemo"
 	When I set the text box using element id "login_email_field" with the value "admin@example.com"
 	And I set the text box using element id "login_password_field" with the value "supersecret"
@@ -108,14 +107,14 @@ Scenario: 002-Login with valid credentials
 	Then the page title is "ShoppingDemo"
 	And the page contains the text "Catalog"
 	
-Scenario: 003-Logout
+Scenario: 02-Logout
 	Given the page is loaded
 	When I click on the link containing the text "Logout"
 	Then the page contains the text "You need to sign in or sign up before continuing."
 	And I close the current page
 
 	@ignore
-Scenario: 004- Login Validation - Empty User ID & Password
+Scenario: 03- Login Validation - Empty User ID & Password
 	Given the page is loaded
 	When I set the text box using element id "login_email_field" with the value " "
 	And I set the text box using element id "login_password_field" with the value " "

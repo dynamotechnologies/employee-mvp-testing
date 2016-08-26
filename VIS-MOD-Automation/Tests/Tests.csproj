@@ -74,6 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\CommonFeatureSteps.cs" />
+    <Compile Include="Features\EmployeeMvp\EmployeeMvp.cs" />
+    <Compile Include="Features\EmployeeMvp\EmployeeMvp.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeMvp.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\ShoppingCart\OnlineShoppingCart.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -86,6 +92,10 @@
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Features\EmployeeMvp\EmployeeMvp.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EmployeeMvp.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\ShoppingCart\OnlineShoppingCart.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

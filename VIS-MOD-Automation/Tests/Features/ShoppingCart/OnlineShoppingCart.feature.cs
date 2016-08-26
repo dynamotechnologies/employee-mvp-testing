@@ -103,115 +103,115 @@ namespace Tests.Features.ShoppingCart
         public virtual void _001_RegisterNewUserWithEmailAddress()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("001-Register new user with Email Address", ((string[])(null)));
-#line 82
+#line 81
 this.ScenarioSetup(scenarioInfo);
-#line 83
+#line 82
  testRunner.Given("I navigate to the url \"http://qa01.cloud.capitissolutions.com/users/sign_in\" titl" +
                     "ed \"ShoppingDemo\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 84
+#line 83
  testRunner.When("I click on the link containing the text \"Sign up\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 85
+#line 84
  testRunner.And("I set the text box using element id \"user_login_id\" with the value \"olaf\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 86
+#line 85
  testRunner.And("I set the text box using element id \"user_email\" with the value \"olaf_stark@putsb" +
                     "ox.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 87
+#line 86
  testRunner.And("I set the text box using element id \"user_first_name\" with the value \"olaf\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 88
+#line 87
  testRunner.And("I set the text box using element id \"user_last_name\" with the value \"stark\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 89
+#line 88
  testRunner.And("I set the text box using element id \"user_street_address\" with the value \"2600 To" +
                     "wer Oaks Blvd\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 90
+#line 89
  testRunner.And("I set the text box using element id \"user_city\" with the value \"Rockville\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 91
+#line 90
  testRunner.And("I set the text box using element id \"user_state\" with the value \"Maryland\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 92
+#line 91
  testRunner.And("I set the text box using element id \"user_zip\" with the value \"20876\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 93
+#line 92
  testRunner.And("I set the text box using element id \"user_cc_number\" with the value \"123480922300" +
                     "1601\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 94
+#line 93
  testRunner.And("I set the text box using element id \"user_cvv\" with the value \"999\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 95
+#line 94
  testRunner.And("I set the text box using element id \"user_cc_exp_date\" with the value \"01/2020\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 96
+#line 95
  testRunner.And("I set the text box using element id \"user_password\" with the value \"Autotest123!\"" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 97
+#line 96
  testRunner.And("I set the text box using element id \"user_password_confirmation\" with the value \"" +
                     "Autotest123!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 99
+#line 98
  testRunner.And("I set the text box using element id \"user_security_answer\" with the value \"ruby\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 100
+#line 99
  testRunner.And("I click on the submit button labeled \"Sign up\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("002-Login with valid credentials")]
-        public virtual void _002_LoginWithValidCredentials()
+        [NUnit.Framework.DescriptionAttribute("01-Login with valid credentials")]
+        public virtual void _01_LoginWithValidCredentials()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("002-Login with valid credentials", ((string[])(null)));
-#line 103
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01-Login with valid credentials", ((string[])(null)));
+#line 102
 this.ScenarioSetup(scenarioInfo);
-#line 104
+#line 103
  testRunner.Given("I navigate to the url \"http://qa01.cloud.capitissolutions.com/users/sign_in\" titl" +
                     "ed \"ShoppingDemo\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 105
+#line 104
  testRunner.When("I set the text box using element id \"login_email_field\" with the value \"admin@exa" +
                     "mple.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 106
+#line 105
  testRunner.And("I set the text box using element id \"login_password_field\" with the value \"supers" +
                     "ecret\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 107
+#line 106
  testRunner.And("I click on the button using element id \"login_submit_button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 108
+#line 107
  testRunner.Then("the page title is \"ShoppingDemo\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 109
+#line 108
  testRunner.And("the page contains the text \"Catalog\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("003-Logout")]
-        public virtual void _003_Logout()
+        [NUnit.Framework.DescriptionAttribute("02-Logout")]
+        public virtual void _02_Logout()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("003-Logout", ((string[])(null)));
-#line 111
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02-Logout", ((string[])(null)));
+#line 110
 this.ScenarioSetup(scenarioInfo);
-#line 112
+#line 111
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 113
+#line 112
  testRunner.When("I click on the link containing the text \"Logout\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 114
+#line 113
  testRunner.Then("the page contains the text \"You need to sign in or sign up before continuing.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 115
+#line 114
  testRunner.And("I close the current page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("004- Login Validation - Empty User ID & Password")]
+        [NUnit.Framework.DescriptionAttribute("03- Login Validation - Empty User ID & Password")]
         [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
-        public virtual void _004_LoginValidation_EmptyUserIDPassword()
+        public virtual void _03_LoginValidation_EmptyUserIDPassword()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("004- Login Validation - Empty User ID & Password", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03- Login Validation - Empty User ID & Password", new string[] {
                         "ignore"});
-#line 118
+#line 117
 this.ScenarioSetup(scenarioInfo);
-#line 119
+#line 118
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 120
+#line 119
  testRunner.When("I set the text box using element id \"login_email_field\" with the value \" \"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 121
+#line 120
  testRunner.And("I set the text box using element id \"login_password_field\" with the value \" \"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 122
+#line 121
  testRunner.And("I click on the button using element id \"login_submit_button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 123
+#line 122
  testRunner.Then("the page contains the text \"Invalid Email or password.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -224,19 +224,19 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("005- Login Validation - Invalid User ID & Invalid Password", new string[] {
                         "ignore"});
-#line 126
+#line 125
 this.ScenarioSetup(scenarioInfo);
-#line 127
+#line 126
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 128
+#line 127
  testRunner.When("I set the text box using element id \"login_email_field\" with the value \"invalidUs" +
                     "erId\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 129
+#line 128
  testRunner.And("I set the text box using element id \"login_password_field\" with the value \"invali" +
                     "dPassword\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 130
+#line 129
  testRunner.And("I click on the button using element id \"login_submit_button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 131
+#line 130
  testRunner.Then("the page contains the text \"Invalid Email or password.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -249,19 +249,19 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("006- Login Validation - Valid User ID & Invalid Password", new string[] {
                         "ignore"});
-#line 134
+#line 133
 this.ScenarioSetup(scenarioInfo);
-#line 135
+#line 134
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 136
+#line 135
  testRunner.When("I set the text box using element id \"login_email_field\" with the value \"clara@put" +
                     "sbox.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 137
+#line 136
  testRunner.And("I set the text box using element id \"login_password_field\" with the value \"invali" +
                     "dPassword\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 138
+#line 137
  testRunner.And("I click on the button using element id \"login_submit_button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 139
+#line 138
  testRunner.Then("the page contains the text \"Invalid Email or password.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -274,19 +274,19 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("007- Login Validation - Invalid User ID & Valid Password", new string[] {
                         "ignore"});
-#line 142
+#line 141
 this.ScenarioSetup(scenarioInfo);
-#line 143
+#line 142
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 144
+#line 143
  testRunner.When("I set the text box using element id \"login_email_field\" with the value \"invalidUs" +
                     "erId\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 145
+#line 144
  testRunner.And("I set the text box using element id \"login_password_field\" with the value \"Autote" +
                     "st123!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 146
+#line 145
  testRunner.And("I click on the button using element id \"login_submit_button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 147
+#line 146
  testRunner.Then("the page contains the text \"Invalid Email or password.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -299,21 +299,21 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("008- Succesful Login - Valid User ID & Password", new string[] {
                         "ignore"});
-#line 150
+#line 149
 this.ScenarioSetup(scenarioInfo);
-#line 151
+#line 150
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 152
+#line 151
  testRunner.When("I set the text box using element id \"login_email_field\" with the value \"clara@put" +
                     "sbox.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 153
+#line 152
  testRunner.And("I set the text box using element id \"login_password_field\" with the value \"Autote" +
                     "st123!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 154
+#line 153
  testRunner.And("I click on the button using element id \"login_submit_button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 155
+#line 154
  testRunner.Then("the page title is \"ShoppingDemo\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 156
+#line 155
  testRunner.And("I close the current page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -326,46 +326,46 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02- Duplicate Email Address", new string[] {
                         "ignore"});
-#line 159
+#line 158
 this.ScenarioSetup(scenarioInfo);
-#line 160
+#line 159
  testRunner.Given("I navigate to the url \"\" titled \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 161
+#line 160
  testRunner.When("I click on the link containing the text \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 162
+#line 161
  testRunner.And("I set the text box using element id \"\" with the value \"Ravi\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 163
+#line 162
  testRunner.And("I set the text box using element id \"\" with the value \"Radha-EmailAddr\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 164
+#line 163
  testRunner.And("I set the text box using element id \"\" with the value \"ravi.radhakrishnan@variq.c" +
                     "om\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 165
+#line 164
  testRunner.And("I set the text box using element id \"\" with the value \"mypasswd$0\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 166
+#line 165
  testRunner.And("I set the text box using element id \"\" with the value \"2600 Tower Oaks Blvd\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 167
+#line 166
  testRunner.And("I set the text box using element id \"\" with the value \"Rockville\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 168
+#line 167
  testRunner.And("I set the text box using element id \"\" with the value \"Maryland\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 169
+#line 168
  testRunner.And("I set the text box using element id \"\" with the value \"20876\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 170
+#line 169
  testRunner.And("I set the text box using element id \"\" with the value \"5466809223001601\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 171
+#line 170
  testRunner.And("I set the text box using element id \"\" with the value \"12\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 172
+#line 171
  testRunner.And("I set the text box using element id \"\" with the value \"19\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 173
+#line 172
  testRunner.And("I set the text box using element id \"\" with the value \"216\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 174
+#line 173
  testRunner.And("I select the drop down text \"*** Any Security Question ****\" using element id \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 175
+#line 174
  testRunner.And("I click on the button using element id \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 176
+#line 175
  testRunner.Then("the page title is \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 177
+#line 176
  testRunner.And("the page contains the text \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 178
+#line 177
  testRunner.And("I close the current page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -378,43 +378,43 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03-Register new user with User ID", new string[] {
                         "ignore"});
-#line 181
+#line 180
 this.ScenarioSetup(scenarioInfo);
-#line 182
+#line 181
  testRunner.Given("I navigate to the url \"\" titled \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 183
+#line 182
  testRunner.When("I click on the link containing the text \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 184
+#line 183
  testRunner.And("I set the text box using element id \"\" with the value \"Ravi\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 185
+#line 184
  testRunner.And("I set the text box using element id \"\" with the value \"Radha-UserID\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 186
+#line 185
  testRunner.And("I set the text box using element id \"\" with the value \"ravi.radhakrishnan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 187
+#line 186
  testRunner.And("I set the text box using element id \"\" with the value \"mypasswd$0\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 188
+#line 187
  testRunner.And("I set the text box using element id \"\" with the value \"2600 Tower Oaks Blvd\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 189
+#line 188
  testRunner.And("I set the text box using element id \"\" with the value \"Rockville\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 190
+#line 189
  testRunner.And("I set the text box using element id \"\" with the value \"Maryland\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 191
+#line 190
  testRunner.And("I set the text box using element id \"\" with the value \"20876\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 192
+#line 191
  testRunner.And("I set the text box using element id \"\" with the value \"5466809223001601\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 193
+#line 192
  testRunner.And("I set the text box using element id \"\" with the value \"12\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 194
+#line 193
  testRunner.And("I set the text box using element id \"\" with the value \"19\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 195
+#line 194
  testRunner.And("I set the text box using element id \"\" with the value \"216\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 196
+#line 195
  testRunner.And("I select the drop down text \"*** Any Security Question ****\" using element id \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 197
+#line 196
  testRunner.And("I click on the button using element id \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 198
+#line 197
  testRunner.Then("the page title is \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 199
+#line 198
  testRunner.And("I click on the link containing the text \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -427,46 +427,46 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04- Duplicate User ID", new string[] {
                         "ignore"});
-#line 202
+#line 201
 this.ScenarioSetup(scenarioInfo);
-#line 203
+#line 202
  testRunner.Given("I navigate to the url \"\" titled \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 204
+#line 203
  testRunner.When("I click on the link containing the text \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 205
+#line 204
  testRunner.And("I set the text box using element id \"\" with the value \"Ravi\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 206
+#line 205
  testRunner.And("I set the text box using element id \"\" with the value \"Radha-UserId\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 207
+#line 206
  testRunner.And("I set the text box using element id \"\" with the value \"ravi.radhakrishnan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 208
+#line 207
  testRunner.And("I set the text box using element id \"\" with the value \"mypasswd$0\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 209
+#line 208
  testRunner.And("I set the text box using element id \"\" with the value \"2600 Tower Oaks Blvd\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 210
+#line 209
  testRunner.And("I set the text box using element id \"\" with the value \"Rockville\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 211
+#line 210
  testRunner.And("I set the text box using element id \"\" with the value \"Maryland\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 212
+#line 211
  testRunner.And("I set the text box using element id \"\" with the value \"20876\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 213
+#line 212
  testRunner.And("I set the text box using element id \"\" with the value \"5466809223001601\" # CC Num" +
                     "ber", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 214
+#line 213
  testRunner.And("I set the text box using element id \"\" with the value \"12\"  # CC Exp Month", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 215
+#line 214
  testRunner.And("I set the text box using element id \"\" with the value \"19\"  # CC Exp Year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 216
+#line 215
  testRunner.And("I set the text box using element id \"\" with the value \"216\" # CC Sec Code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 217
+#line 216
  testRunner.And("I select the drop down text \"*** Any Security Question ****\" using element id \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 218
+#line 217
  testRunner.And("I click on the button using element id \"\"  # Register Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 219
+#line 218
  testRunner.Then("the page title is \"\"  # Duplicate Email Address error page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 220
+#line 219
  testRunner.And("the page contains the text \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 221
+#line 220
  testRunner.And("I close the current page  # Close browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -494,13 +494,13 @@ this.ScenarioSetup(scenarioInfo);
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("10- Verify Product Catalog page - Item Name & Price", @__tags);
-#line 224
+#line 223
 this.ScenarioSetup(scenarioInfo);
-#line 225
+#line 224
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 226
+#line 225
  testRunner.When("I access the table using element id \"\"  # Product Catalog table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 227
+#line 226
  testRunner.Then(string.Format("table row number {0} contains the values {1} from the following table", tableRowNumber, data), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -513,13 +513,13 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("11- Product Catalog - Select items and click on Shopping Cart", new string[] {
                         "ignore"});
-#line 243
+#line 242
 this.ScenarioSetup(scenarioInfo);
-#line 244
+#line 243
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 246
+#line 245
  testRunner.And("I click on the button using element id \"\"  # Shopping Cart Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 247
+#line 246
  testRunner.Then("the page title is \"\"  # Shopping Cart page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -543,15 +543,15 @@ this.ScenarioSetup(scenarioInfo);
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("12-Verify Shopping Cart", @__tags);
-#line 250
+#line 249
 this.ScenarioSetup(scenarioInfo);
-#line 251
+#line 250
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 252
+#line 251
  testRunner.When("I access the table using element id \"\"  # Shopping Cart table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 253
+#line 252
  testRunner.Then("the text box using element id \"\" contains the value \"\"  # Total Cost", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 254
+#line 253
  testRunner.Then(string.Format("table row number {0} contains the values {1} from the following table", tableRowNumber, data), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -564,17 +564,17 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("13-From Shopping Cart go to Product Catalog Page", new string[] {
                         "ignore"});
-#line 266
+#line 265
 this.ScenarioSetup(scenarioInfo);
-#line 267
+#line 266
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 268
+#line 267
  testRunner.When("I click on the button using element id \"\"  # Return to Product Catalog", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 269
+#line 268
  testRunner.And("the page title is \"\"  # Product Catalog page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 271
+#line 270
  testRunner.And("I click on the button using element id \"\"  # Shopping Cart Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 272
+#line 271
  testRunner.Then("the page title is \"\"  # Shopping Cart page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -601,13 +601,13 @@ this.ScenarioSetup(scenarioInfo);
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("14-Shopping Cart Page - Verify final details of product selections", @__tags);
-#line 275
+#line 274
 this.ScenarioSetup(scenarioInfo);
-#line 276
+#line 275
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 277
+#line 276
  testRunner.Then("the text box using element id \"\" contains the value \"\"  # Total Cost", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 278
+#line 277
  testRunner.And(string.Format("table row number {0} contains the values {1} from the following table", tableRowNumber, data), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -620,13 +620,13 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("15- Go to Checkout", new string[] {
                         "ignore"});
-#line 293
+#line 292
 this.ScenarioSetup(scenarioInfo);
-#line 294
+#line 293
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 295
+#line 294
  testRunner.When("I click on the button using element id \"\"  # Review Order page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 296
+#line 295
  testRunner.Then("the page title is \"\"  # Review Order page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -653,17 +653,17 @@ this.ScenarioSetup(scenarioInfo);
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("16- Verify Review Order Page - Item Names, Count, Cost, CC, Shipping Address", @__tags);
-#line 299
+#line 298
 this.ScenarioSetup(scenarioInfo);
-#line 300
+#line 299
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 301
+#line 300
  testRunner.Then("the text box using element id \"\" contains the value \"\"  # Total Cost", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 302
+#line 301
  testRunner.Then("the text box using element id \"\" contains the value \"\"  # CC Info", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 303
+#line 302
  testRunner.Then("the text box using element id \"\" contains the value \"\"  # Mailing Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 304
+#line 303
  testRunner.And(string.Format("table row number {0} contains the values {1} from the following table", tableRowNumber, data), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -676,15 +676,15 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("17- Click on Submit Order and verify Confirmation Page", new string[] {
                         "ignore"});
-#line 319
+#line 318
 this.ScenarioSetup(scenarioInfo);
-#line 320
+#line 319
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 321
+#line 320
  testRunner.When("I click on the button using element id \"\"  # Submit Order button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 322
+#line 321
  testRunner.Then("the page title is \"\"  # Confirmation Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 323
+#line 322
  testRunner.And("the page contains the text \"\"  # Confirmation message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
