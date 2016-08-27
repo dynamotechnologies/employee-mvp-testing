@@ -212,45 +212,27 @@ this.ScenarioSetup(scenarioInfo);
         [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
         public virtual void _03_VD_24_PeerKudosDashboard_InvalidLoginCredentials()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03-VD-24 - Peer Kudos Dashboard - Invalid Login Credentials", new string[] {
-                        "ignore"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03-VD-24 - Peer Kudos Dashboard - Valid Login Credentials", ((string[])(null)));
+#line 112
+            this.ScenarioSetup(scenarioInfo);
+#line 113
+            testRunner.Given("I navigate to the url \"http://qa01.cloud.capitissolutions.com\" titled \"Employee K" +
+                               "udo - MVP\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 114
-this.ScenarioSetup(scenarioInfo);
+            testRunner.When("I click on the link containing the text \"Sign in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 115
- testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+            testRunner.And("I set the text box using element id \"employee_username\" with the value \"nonexistinguser\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 116
- testRunner.When("I set the text box using element id \"login_email_field\" with the value \"invalidUs" +
-                    "erId\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+            testRunner.And("I set the text box using element id \"employee_password\" with the value \"alexdoesnotrule" +
+                               "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 117
- testRunner.And("I set the text box using element id \"login_password_field\" with the value \"invali" +
-                    "dPassword\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+            testRunner.And("I click on the submit button labeled \"Log in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 118
- testRunner.And("I click on the button using element id \"login_submit_button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 119
- testRunner.Then("the page contains the text \"Invalid Email or password.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+            testRunner.And("I close the current page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("04-VD-25 - Peer Kudos Dashboard - Employee of the Month")]
-        [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
-        public virtual void _04_VD_25_PeerKudosDashboard_EmployeeOfTheMonth()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04-VD-25 - Peer Kudos Dashboard - Employee of the Month", new string[] {
-                        "ignore"});
-#line 122
-this.ScenarioSetup(scenarioInfo);
-#line 126
- testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 129
- testRunner.When("I access the table using element id \"top_employees_of_last_month\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 130
- testRunner.Then("the count of rows in the table is \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
+
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("05-VD-26 - Peer Kudos Dashboard - Current Month Top 5 Employees Ranks")]
         [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
@@ -392,40 +374,55 @@ this.ScenarioSetup(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("11-VD-32 - Admin - Login with Valid Credentials")]
-        [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
         public virtual void _11_VD_32_Admin_LoginWithValidCredentials()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("11-VD-32 - Admin - Login with Valid Credentials", new string[] {
-                        "ignore"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("11-VD-32 - Peer Kudos Dashboard - Admin with Valid Login Credentials", ((string[])(null)));
+#line 209
+            this.ScenarioSetup(scenarioInfo);
+#line 210
+            testRunner.Given("I navigate to the url \"http://qa01.cloud.capitissolutions.com\" titled \"Employee K" +
+                               "udo - MVP\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 211
-this.ScenarioSetup(scenarioInfo);
+            testRunner.When("I click on the link containing the text \"Sign in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 212
- testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+            testRunner.And("I set the text box using element id \"employee_username\" with the value \"existingadminu\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 213
- testRunner.When("I set the text box using element id \"login_email_field\" with the value \"invalidUs" +
-                    "erId\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+            testRunner.And("I set the text box using element id \"employee_password\" with the value \"existingadminp" +
+                               "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 214
- testRunner.And("I set the text box using element id \"login_password_field\" with the value \"invali" +
-                    "dPassword\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+            testRunner.And("I click on the submit button labeled \"Log in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 215
- testRunner.And("I click on the button using element id \"login_submit_button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+            testRunner.Then("the page contains the text \"Profile\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 216
- testRunner.Then("the page contains the text \"Invalid Email or password.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+            testRunner.And("the page contains the text \"Kudos Received\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("12-VD-33 - Admin - Login with Invalid Credentials")]
-        [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
         public virtual void _12_VD_33_Admin_LoginWithInvalidCredentials()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("12-VD-33 - Admin - Login with Invalid Credentials", new string[] {
-                        "ignore"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("12-VD-32- Peer Kudos Dashboard - Admin with Invalid Login Credentials", ((string[])(null)));
+#line 217
+            this.ScenarioSetup(scenarioInfo);
+#line 218
+            testRunner.Given("I navigate to the url \"http://qa01.cloud.capitissolutions.com\" titled \"Employee K" +
+                               "udo - MVP\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 219
-this.ScenarioSetup(scenarioInfo);
+            testRunner.When("I click on the link containing the text \"Sign in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 220
+            testRunner.And("I set the text box using element id \"employee_username\" with the value \"nonexistingadminu\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 221
+            testRunner.And("I set the text box using element id \"employee_password\" with the value \"nonexistingadminp" +
+                               "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 222
+            testRunner.And("I click on the submit button labeled \"Log in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 223
+            testRunner.Then("the page contains the text \"Profile\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 224
+            testRunner.And("the page contains the text \"Kudos Received\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-            this.ScenarioCleanup();
         }
     }
 }
