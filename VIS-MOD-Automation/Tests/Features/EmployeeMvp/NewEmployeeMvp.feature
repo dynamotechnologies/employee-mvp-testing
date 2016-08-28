@@ -124,7 +124,6 @@ Scenario: 06-Admin-Peer Kudos Dashboard - Current Month Top 5 Employees Ranks (V
 	And table row number "2" column number "1" contains the value "1"
 	And table row number "3" column number "1" contains the value "2"
 
-	@ignore
 Scenario: 07-Assign stars to employees displayed in Search Results (VD-29)
 	Given the page is loaded
 	When I set the text box using name attribute "q" with the value "bella"

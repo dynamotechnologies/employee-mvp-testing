@@ -241,31 +241,29 @@ this.ScenarioSetup(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("07-Assign stars to employees displayed in Search Results (VD-29)")]
-        [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
         public virtual void _07_AssignStarsToEmployeesDisplayedInSearchResultsVD_29()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("07-Assign stars to employees displayed in Search Results (VD-29)", new string[] {
-                        "ignore"});
-#line 128
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("07-Assign stars to employees displayed in Search Results (VD-29)", ((string[])(null)));
+#line 127
 this.ScenarioSetup(scenarioInfo);
-#line 129
+#line 128
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 130
+#line 129
  testRunner.When("I set the text box using name attribute \"q\" with the value \"bella\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 131
+#line 130
  testRunner.And("I click on the submit button containing the text \"Search!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 132
+#line 131
  testRunner.And("I access the table using tag \"table\" attribute type \"id\" attribute value \"Give-Ku" +
                     "dos-Table\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 133
+#line 132
  testRunner.And("I save the data from table row number \"2\" column number \"3\" into the variable \"in" +
                     "itialKudos\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 135
+#line 134
  testRunner.And("I click on the element using tag \"span\" attribute type \"data-kudos-amount\" attrib" +
                     "ute value \"1\" in row number \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 136
+#line 135
  testRunner.And("I set the text box using element id \"kudo_transaction\" with the value \"Awesome!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 137
+#line 136
  testRunner.And("I click on the button using class name \"give-btn\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -276,15 +274,15 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _08_LogoutAsARegularUser()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("08-Logout as a Regular User", ((string[])(null)));
-#line 140
+#line 139
 this.ScenarioSetup(scenarioInfo);
-#line 141
+#line 140
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 142
+#line 141
  testRunner.When("I click on the link containing the text \"Sign out\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 143
+#line 142
  testRunner.Then("the page contains the text \"You need to sign in or sign up before continuing\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 144
+#line 143
  testRunner.And("I close the current page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -295,19 +293,19 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _09_AdminLoginCredentialsVD_32()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("09-Admin Login Credentials (VD-32)", ((string[])(null)));
-#line 146
+#line 145
 this.ScenarioSetup(scenarioInfo);
-#line 147
+#line 146
  testRunner.Given("I navigate to the url \"http://env03.cloud.capitissolutions.com\" titled \"Employee " +
                     "Kudos MVP\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 149
+#line 148
  testRunner.When("I set the text box using element id \"employee_username\" with the value \"alex\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 150
+#line 149
  testRunner.And("I set the text box using element id \"employee_password\" with the value \"alexrules" +
                     "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 151
+#line 150
  testRunner.And("I click on the submit button labeled \"Log in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 152
+#line 151
  testRunner.Then("the page contains the text \"Signed in successfully\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -318,13 +316,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _10_ManageEmployees()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("10-Manage Employees", ((string[])(null)));
-#line 154
+#line 153
 this.ScenarioSetup(scenarioInfo);
-#line 155
+#line 154
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 156
+#line 155
  testRunner.When("I click on the link containing the text \"Manage Employees\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 157
+#line 156
  testRunner.Then("the page contains the text \"Admin Dashboard\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -335,42 +333,42 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _11_AddNewEmployee()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("11-Add New Employee", ((string[])(null)));
-#line 159
+#line 158
 this.ScenarioSetup(scenarioInfo);
-#line 160
+#line 159
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 161
+#line 160
  testRunner.When("I click on the link containing the text \"Add New Employee\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 162
+#line 161
  testRunner.And("the page contains the text \"Add New Employee\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 165
+#line 164
  testRunner.And("I save a random string with \"8\" characters into the variable \"username\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 166
+#line 165
  testRunner.And("I set the text box using element id \"employee_username\" with the value stored in " +
                     "the variable \"username\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 169
+#line 168
  testRunner.And("I set the text box using element id \"employee_password\" with the value \"Autotest1" +
                     "23!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 170
+#line 169
  testRunner.And("I set the text box using element id \"employee_password_confirmation\" with the val" +
                     "ue \"Autotest123!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 173
+#line 172
  testRunner.And("I append the following strings \"[username],@,test.com\" and save the result into t" +
                     "he variable \"emailAddress\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 174
+#line 173
  testRunner.And("I set the text box using element id \"employee_email\" with the value stored in the" +
                     " variable \"emailAddress\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 176
+#line 175
  testRunner.And("I set the text box using element id \"employee_first_name\" with the value \"TestUse" +
                     "r-FN\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 177
+#line 176
  testRunner.And("I set the text box using element id \"employee_last_name\" with the value \"User-LN\"" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 178
+#line 177
  testRunner.And("I set the checkbox with element id \"employee_is_admin\" to \"true\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 179
+#line 178
  testRunner.And("I click on the submit button labeled \"Save changes\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 180
+#line 179
  testRunner.Then("the page contains the text \"Employee was successfully created\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -383,11 +381,11 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("72-VD-25 - Peer Kudos Dashboard - Employee of the Previous Month", new string[] {
                         "ignore"});
-#line 184
+#line 183
 this.ScenarioSetup(scenarioInfo);
-#line 186
+#line 185
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 187
+#line 186
  testRunner.Then("the page using element id \"Panel-Last Month\'s Winner\" and attribute type \"div\" co" +
                     "ntains the text \"Alex Duan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -401,14 +399,14 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("73-VD-29 - Peer Kudos Dashboard - Assign stars to employees in Top 5", new string[] {
                         "ignore"});
-#line 191
+#line 190
 this.ScenarioSetup(scenarioInfo);
-#line 193
+#line 192
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 194
+#line 193
  testRunner.When("I save the data using element id \"top_1_of_5_employee\" into the variable \"current" +
                     "StarCount\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 195
+#line 194
  testRunner.And("I click on the button using element id \"3-star\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -421,17 +419,17 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("75-VD-27 - Peer Kudos Dashboard - My Current Month Ranking", new string[] {
                         "ignore"});
-#line 205
+#line 204
 this.ScenarioSetup(scenarioInfo);
-#line 210
+#line 209
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 213
+#line 212
  testRunner.Then("the element using element Id \"Panel-Last Month\'s Winner\" contains the text \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 214
+#line 213
  testRunner.Then("the element using element Id \"my_star_given_count\" contains the text \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 215
+#line 214
  testRunner.Then("the element using element Id \"my_star_remaining_count\" contains the text \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 216
+#line 215
  testRunner.And("I close the current page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -444,22 +442,22 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("76-VD-32 - Admin - Login", new string[] {
                         "ignore"});
-#line 219
+#line 218
 this.ScenarioSetup(scenarioInfo);
-#line 222
+#line 221
  testRunner.Given("I navigate to the url \"http://env03.cloud.capitissolutions.com\" titled \"ShoppingD" +
                     "emo\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 223
+#line 222
  testRunner.When("I set the text box using element id \"login_email_field\" with the value \"admin@exa" +
                     "mple.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 224
+#line 223
  testRunner.And("I set the text box using element id \"login_password_field\" with the value \"supers" +
                     "ecret\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 225
+#line 224
  testRunner.And("I click on the button using element id \"login_submit_button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 226
+#line 225
  testRunner.Then("the page title is \"ShoppingDemo\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 227
+#line 226
  testRunner.And("the page contains the text \"Catalog\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -472,21 +470,21 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("77-VD-24 - Peer Kudos Dashboard - Valid Admin Login Credentials", new string[] {
                         "ignore"});
-#line 230
+#line 229
 this.ScenarioSetup(scenarioInfo);
-#line 231
+#line 230
  testRunner.Given("I navigate to the url \"http://env03.cloud.capitissolutions.com\" titled \"Employee " +
                     "Kudos MVP\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 232
+#line 231
  testRunner.When("I set the text box using element id \"employee_username\" with the value \"alex\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 233
+#line 232
  testRunner.And("I set the text box using element id \"employee_password\" with the value \"alexrules" +
                     "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 234
+#line 233
  testRunner.And("I click on the submit button labeled \"Log in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 235
+#line 234
  testRunner.Then("the page contains the text \"Profile\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 236
+#line 235
  testRunner.And("the page contains the text \"Kudos Received\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -499,19 +497,19 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("78-VD-32 - Admin - Login with Valid Credentials", new string[] {
                         "ignore"});
-#line 239
+#line 238
 this.ScenarioSetup(scenarioInfo);
-#line 240
+#line 239
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 241
+#line 240
  testRunner.When("I set the text box using element id \"login_email_field\" with the value \"invalidUs" +
                     "erId\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 242
+#line 241
  testRunner.And("I set the text box using element id \"login_password_field\" with the value \"invali" +
                     "dPassword\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 243
+#line 242
  testRunner.And("I click on the button using element id \"login_submit_button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 244
+#line 243
  testRunner.Then("the page contains the text \"Invalid Email or password.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
