@@ -1,4 +1,5 @@
 using System.Configuration;
+using System.Linq;
 using NUnit.Framework;
 using PageObjects.Common.Page;
 using SeleniumUtils;
@@ -41,6 +42,7 @@ namespace StepDefinitions.UI
             // checking the same title again at the start of the next scenario using - Given the page title is "xxx"
         }
 
+        [When(@"the page contains the text ""(.*)""")]
         [Then(@"the page contains the text ""(.*)""")]
         public void PageContainsTheText(string text)
         {
@@ -68,6 +70,13 @@ namespace StepDefinitions.UI
         public void SearchTheBrowserForTheText(string searchText, string elementId)
         {
             TextBoxPageObject.SearchBrowserUsingElementId(searchText, elementId);
+        }
+
+        [Then(@"the page using element id ""(.*)"" and attribute type ""(.*)"" contains the text ""(.*)""")]
+        public void ThenThePageUsingElementIdContainsTheText(string elementId, string text, string attrType)
+        {
+            Assert.True(elementId.GetTextOfElement().Contains(text) ||
+                        PageBase.ElementOfPageContainsText(elementId, attrType, text));
         }
 
 
@@ -142,6 +151,35 @@ namespace StepDefinitions.UI
         public void ThenISwitchBackToTheBodyOfThePage()
         {
             PageBase.SwitchFromFrameToPage();
+        }
+
+        [When(@"I save a random string with ""(.*)"" characters into the variable ""(.*)""")]
+        public void SaveRandomStringWithCharactersIntoVariable(int stringLength, string contextVar)
+        {
+            FeatureContext.Current[contextVar] = PageBase.GenerateRandomString(stringLength);
+        }
+
+        [When(@"I append the following strings ""(.*)"" and save the result into the variable ""(.*)""")]
+        public void WhenIAppendTheFollowingStringsAndSaveTheResultIntoTheVariable(string stringSet, string contextVar)
+        {
+            /*
+                Append a series of context variables or strings or both using the following rules
+                a) Context variables and strings are separated by commas
+                b) There should be no space before or after each comma
+                c) Context variables are enclosed in square braces. Example: [agencyName]
+                d) Strings are represented without quotes. Example: (LU
+                e) If you need spaces in the strings you append together, each space should be separate with its own comma. 
+                Example: When I append the following string "[agencyName], ,(, ,LU,[agencyCode], ,)" and save the result into the variable "fullAgencyName" 
+                Output:Variq ( LUZZ )
+                Here, context variable agencyName contains Variq and context variable agencyCode contains ZZ
+                Note the space before and after ( and a space before ). Each of these spaces are represented with by 2 commas separated by a space in between the commas.
+            */
+            var stringArray = stringSet.Split(',');
+            var context = FeatureContext.Current;
+            context[contextVar] = stringArray.Select(t => t.ToString())
+                .Aggregate("",
+                    (current, str) =>
+                        current + (str.StartsWith("[") ? context[str.Replace("[", "").Replace("]", "")] : str));
         }
 
         /*/=============================

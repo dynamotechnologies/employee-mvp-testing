@@ -33,7 +33,7 @@ namespace SeleniumUtils
             CleanupChrome();
             var options = new ChromeOptions();
             options.AddArguments("test-type", "--disable-popup-blocking");
-            options.AddExtensions("../../../Selenium/New-Tab-New-Window_v3.2.crx", "../../../Selenium/PDF-Viewer_v1.5.294.crx");
+            //options.AddExtensions("../../../Selenium/New-Tab-New-Window_v3.2.crx", "../../../Selenium/PDF-Viewer_v1.5.294.crx");
             Browser.Current = new ChromeDriver("../../../Selenium/", options);
             Browser.Current.Manage().Cookies.DeleteAllCookies();
             Browser.Current.Manage().Window.Maximize();

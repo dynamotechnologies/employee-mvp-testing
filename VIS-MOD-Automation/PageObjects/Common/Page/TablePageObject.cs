@@ -88,6 +88,17 @@ namespace PageObjects.Common.Page
                 .ClickAndWait();
         }
 
+        public static void ClickElementUsingTagAttributeInRowNumber(string tag, string attrType, string attrValue,
+            int rowNumber)
+            /*
+                For row element corresponding to specified row number. In this row, find the tag element whose specified attribute type 
+                contains the specified attribute value. Click on this sub-element.
+            */
+        {
+            GetTableRowsByTagAttribute[rowNumber - 1].FindElements(By.TagName(tag))
+                .Single(t => t.GetAttribute(attrType).Equals(attrValue)).ClickAndWait();
+        }
+
         public static bool TableContainsData(string data)
         {
             return

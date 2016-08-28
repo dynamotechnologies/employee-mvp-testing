@@ -80,6 +80,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EmployeeMvp.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\EmployeeMvp\NewEmployeeMvp.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEmployeeMvp.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\ShoppingCart\OnlineShoppingCart.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -96,6 +101,10 @@
     <None Include="Features\EmployeeMvp\EmployeeMvp.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>EmployeeMvp.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\EmployeeMvp\NewEmployeeMvp.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>NewEmployeeMvp.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\ShoppingCart\OnlineShoppingCart.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

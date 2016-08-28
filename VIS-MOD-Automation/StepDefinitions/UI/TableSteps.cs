@@ -42,6 +42,12 @@ namespace StepDefinitions.UI
             Assert.True(TablePageObject.CountOfTableRows.Equals(count));
         }
 
+        [Then(@"the count of rows in the table is greater than ""(.*)""")]
+        public void ThenTheCountOfRowsInTheTableIsGreaterThan(int minRowCount)
+        {
+            Assert.True(TablePageObject.CountOfTableRows > minRowCount);
+        }
+
         [Then(@"table row number ""(.*)"" contains the value ""(.*)""")]
         public void TableRowNumberContainsTheValue(int tableRowNumber, string value)
         {
@@ -78,6 +84,12 @@ namespace StepDefinitions.UI
             /* Context stores actual index starting with 0; User-specified index starts with 1 */
             var rowNumber = Convert.ToInt32(FeatureContext.Current[contextVar]);
             TablePageObject.ClickOnLabeledButtonInRowNumber(label, rowNumber + 1);
+        }
+
+        [When(@"I click on the element using tag ""(.*)"" attribute type ""(.*)"" attribute value ""(.*)"" in row number ""(.*)""")]
+        public void WhenIClickOnTheElementUsingTagAttributeTypeAttributeValueInRowNumber(string tag, string attrType, string attrValue, int rowNumber)
+        {
+            TablePageObject.ClickElementUsingTagAttributeInRowNumber(tag, attrType, attrValue, rowNumber);
         }
 
         [When(@"I save the table row number containing the data ""(.*)"" in column number ""(.*)"" into the variable ""(.*)""")]

@@ -1,5 +1,6 @@
 using System.Linq;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 
 namespace SeleniumUtils
 {
@@ -29,6 +30,24 @@ namespace SeleniumUtils
             while (isAlertPresent)
             {
                 alert.Accept();
+                isAlertPresent = browser.TryGetAlert(out alert);
+            }
+        }
+
+        public static void CancelAllAlerts(this IWebDriver browser)
+        {
+            IAlert alert;
+            Wait.For(); // pause for a moment for any alert to show up
+
+            var action = new Actions(Browser.Current);
+            action.SendKeys(Keys.Escape);
+            System.Windows.Forms.SendKeys.SendWait("{ESC}");
+
+            var isAlertPresent = browser.TryGetAlert(out alert);
+            while (isAlertPresent)
+            {
+                alert.Dismiss();
+                System.Windows.Forms.SendKeys.SendWait("{ESC}");
                 isAlertPresent = browser.TryGetAlert(out alert);
             }
         }
@@ -72,6 +91,7 @@ namespace SeleniumUtils
             // RK expectedPageTitle = expectedPageTitle ?? new TPage().PageTitle;
             browser.Navigate().GoToUrl(url);
             Wait.Until(b => b.Title.Contains(expectedPageTitle), timeoutSec);
+            Browser.Current.CancelAllAlerts(); // after navigation, disable any popup
             Wait.UntilDocumentReady();
             return new TPage();
         }

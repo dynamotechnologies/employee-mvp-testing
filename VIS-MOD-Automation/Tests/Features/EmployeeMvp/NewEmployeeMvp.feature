@@ -1,4 +1,4 @@
-﻿Feature: EmployeeMVP
+﻿Feature: NewEmployeeMVP
 	Scenario 1:  VD-24 - Peer Kudos Dashboard - Valid Login Credentials
 	Enter valid username/password combo, verify Peer Kudos Dashboard page
 
@@ -73,81 +73,122 @@
 
 	Scenario 19: Peer Kudos Dashboard - Logout of the application
 
-Scenario: 01-VD-24 - Peer Kudos Dashboard - Valid Login Credentials
+Scenario: 01-Invalid Non-Admin Login Credentials (VD-24)
 	Given I navigate to the url "http://env03.cloud.capitissolutions.com" titled "Employee Kudos MVP"
-	When I set the text box using element id "employee_username" with the value "alex"
-	And I set the text box using element id "employee_password" with the value "alexrules"
-	And I click on the submit button labeled "Log in"
-	Then the page contains the text "Profile"
-	And the page contains the text "Kudos Received"
-	
-Scenario: 02-VD-24 - Peer Kudos Dashboard - Invalid Login Credentials
-	Given I navigate to the url "http://env03.cloud.capitissolutions.com" titled "Employee Kudos MVP"
+	# Given I navigate to the url "https://employee-mvp.herokuapp.com" titled "Employee Kudos MVP"
 	When I set the text box using element id "employee_username" with the value "invalidUserid"
 	And I set the text box using element id "employee_password" with the value "invalidPassword"
 	And I click on the submit button labeled "Log in"
 	Then the page contains the text "Invalid Username or password"
 
-Scenario: 03-Log back into the App
+Scenario: 02-Valid Non-Admin Login Credentials (VD-24)
 	Given the page is loaded
-	When I set the text box using element id "employee_username" with the value "alex"
-	And I set the text box using element id "employee_password" with the value "alexrules"
+	When I set the text box using element id "employee_username" with the value "max"
+	And I set the text box using element id "employee_password" with the value "maximumax"
 	And I click on the submit button labeled "Log in"
-	Then the page contains the text "Profile"
-	
-Scenario: 04-Verify Employee Table
+	Then the page contains the text "Signed in successfully"
+
+Scenario Outline: 03-Admin-Validate Profile fields
 	Given the page is loaded
-	When I access the table using element id "Give-Kudos-Table"
-	And I set the text box using name attribute "q" with the value "Max"
+	Then the page contains the text <TextOnPage> from the following table
+
+	Examples: 
+	| TextOnPage      |
+	| Name            |
+	| Kudos Received  |
+	| Kudos to Give   |
+	| Current Ranking |
+	
+Scenario: 04-Admin-Search Employee Table with Full First Name
+	Given the page is loaded
+	When I set the text box using name attribute "q" with the value "Max"
 	And I click on the submit button containing the text "Search!"
-	Then table row number "1" column number "1" contains the value "Max"
-	And table row number "1" column number "2" contains the value "Brailovsky"
-	And table row number "1" column number "3" contains the value "7"
+	And I access the table using tag "table" attribute type "id" attribute value "Give-Kudos-Table"
+	Then table row number "2" column number "1" contains the value "Max"
+	And table row number "2" column number "2" contains the value "Brailovsky"
 
-	@ignore
-Scenario: 03-VD-25 - Peer Kudos Dashboard - Employee of the Previous Month
-	# Verify First & Last Name of employee with the Maximum Stars during the last month
-	# View count of stars displayed
-	# Tie-Out - view runner ups & count of stars for each
-	Given I navigate to the url "http://env03.cloud.capitissolutions.com" titled "Employee Kudos MVP"
-	When I set the text box using element id "employee_username" with the value "alex"
-	And I set the text box using element id "employee_password" with the value "alexrules"
-	And I click on the submit button labeled "Log in"
+Scenario: 05-Admin-Search Employee Table with Partial Name
+	Given the page is loaded
+	When I set the text box using name attribute "q" with the value "a"
+	And I click on the submit button containing the text "Search!"
+	And I access the table using tag "table" attribute type "id" attribute value "Give-Kudos-Table"
+	Then the count of rows in the table is greater than "1"
 
-	# Count ot Employee of the Month
-	When I access the table using element id "top_employees_of_last_month"
-	Then the count of rows in the table is ""
-
-	# First & Last Name, Star Count, Ties - requires Employee Grid Processing
-	#Then table row number "1" column number "1" contains the value ""
-	
-	@ignore
-Scenario: 04-VD-26 - Peer Kudos Dashboard - Current Month Top 5 Employees Ranks
+Scenario: 06-Admin-Peer Kudos Dashboard - Current Month Top 5 Employees Ranks (VD-26)
 	# Top 5 Ranked Employees 
 	Given the page is loaded
-	When I access the table using element id "top_5_employees_of_the_current_month"
-	Then the count of rows in the table is "5"
+	When I access the table using element id "leaderboard-table"
+	Then the count of rows in the table is greater than "2"
 
-	# In Descending order of count of stars for current month ==> requires Employee Grid Processing
-	
+	# Row 1 is header; Ranks of Employees displayed starting row 2
+	And table row number "2" column number "1" contains the value "1"
+	And table row number "3" column number "1" contains the value "2"
+
 	@ignore
-Scenario: 05-VD-28 - Peer Kudos Dashboard - Search Employee
-	#Search an employee using substring of First or Last Name (to select them for a kudo)
+Scenario: 07-Assign stars to employees displayed in Search Results (VD-29)
 	Given the page is loaded
+	When I set the text box using name attribute "q" with the value "bella"
+	And I click on the submit button containing the text "Search!"
+	And I access the table using tag "table" attribute type "id" attribute value "Give-Kudos-Table"
+	And I save the data from table row number "2" column number "3" into the variable "initialKudos"
+	# And I add the numbers contained in the string "[initialKudos], 2" and store into the variable "updatedKudos"
+	And I click on the element using tag "span" attribute type "data-kudos-amount" attribute value "1" in row number "2"
+	And I set the text box using element id "kudo_transaction" with the value "Awesome!"
+	And I click on the button using class name "give-btn"
+	#Then table row number "2" column number "3" contains the value stored in the variable "updatedKudos"
+	
+Scenario: 08-Logout as a Regular User
+	Given the page is loaded
+	When I click on the link containing the text "Sign out"
+	Then the page contains the text "You need to sign in or sign up before continuing"
+	And I close the current page
+
+Scenario: 09-Admin Login Credentials (VD-32)
+	Given I navigate to the url "http://env03.cloud.capitissolutions.com" titled "Employee Kudos MVP"
+	# Given I navigate to the url "https://employee-mvp.herokuapp.com" titled "Employee Kudos MVP"
 	When I set the text box using element id "employee_username" with the value "alex"
 	And I set the text box using element id "employee_password" with the value "alexrules"
 	And I click on the submit button labeled "Log in"
-	And I set the text box using name attribute "q" with the value "Max"
-	And I click on the submit button containing the text "Search!"
-	And I access the table using element id "employee_table"
-	Then table row number "1" column number "1" contains the value "Max" 
-	And table row number "1" column number "2" contains the value "Brailovsky* 
-	And table row number "1" column number "3" contains the value "4" 
+	Then the page contains the text "Signed in successfully"
+
+Scenario: 10-Manage Employees
+	Given the page is loaded
+	When I click on the link containing the text "Manage Employees"
+	Then the page contains the text "Admin Dashboard"
+
+Scenario: 11-Add New Employee
+	Given the page is loaded
+	When I click on the link containing the text "Add New Employee"
+	And the page contains the text "Add New Employee"
+
+	# Generate Unique User Name
+	And I save a random string with "8" characters into the variable "username"
+	And I set the text box using element id "employee_username" with the value stored in the variable "username"
+	#And I set the text box using element id "employee_username" with the value "testuser"
 	
-	#Results are sorted by First Name
+	And I set the text box using element id "employee_password" with the value "Autotest123!"
+	And I set the text box using element id "employee_password_confirmation" with the value "Autotest123!"
+
+	# Generate Unique Email Address
+	And I append the following strings "[username],@,test.com" and save the result into the variable "emailAddress"
+	And I set the text box using element id "employee_email" with the value stored in the variable "emailAddress"
+	
+	And I set the text box using element id "employee_first_name" with the value "TestUser-FN"
+	And I set the text box using element id "employee_last_name" with the value "User-LN"
+	And I set the checkbox with element id "employee_is_admin" to "true"
+	And I click on the submit button labeled "Save changes"
+	Then the page contains the text "Employee was successfully created"
+
 
 	@ignore
-Scenario: 06-VD-29 - Peer Kudos Dashboard - Assign stars to employees in Top 5
+Scenario: 72-VD-25 - Peer Kudos Dashboard - Employee of the Previous Month
+	# Verify First & Last Name of employee with the Maximum Stars during the last month
+	Given the page is loaded
+	Then the page using element id "Panel-Last Month's Winner" and attribute type "div" contains the text "Alex Duan" 
+
+
+	@ignore
+Scenario: 73-VD-29 - Peer Kudos Dashboard - Assign stars to employees in Top 5
 	#Click next to name of "top-5" employee and select stars (1, 2, or 3 only), Verify New Total
 	Given the page is loaded
 	When I save the data using element id "top_1_of_5_employee" into the variable "currentStarCount"
@@ -159,24 +200,9 @@ Scenario: 06-VD-29 - Peer Kudos Dashboard - Assign stars to employees in Top 5
 	# New Step
 	# Then the text box using element id "top_1_of_5_employee" contains the value stored in the variable "totalStars"
 	
-	@ignore	
-Scenario: 07-VD-29 - Peer Kudos Dashboard - Assign stars to employees displayed in Search Results
-	#Search for an employee
-	#Click next to name of employee in search results and enter stars (1, 2, or 3 only)
-	Given the page is loaded
-	When I set the text box using element id "search_employee" with the value "xyz"
-	And I access the table using element id "employee_table"
-	And I save the data from table row number "1" column number "3" into the variable "currentStarCount"
-	And I click on the button using element id "2-star"
-
-	# New Step to add 2 integers
-	# And I add the numbers contained in the string "[currentStarCount], 2" and store into the variable "totalStars"
-
-	# New Step
-	# Then the text box in table row number "1" column number "3" contains the value stored in the variable "totalStars"
 
 	@ignore
-Scenario: 08-VD-27 - Peer Kudos Dashboard - My Current Month Ranking
+Scenario: 75-VD-27 - Peer Kudos Dashboard - My Current Month Ranking
 	#Next to my name, view count of stars I collected for current month
 	#Next to my name, view count of stars I have given out for current month
 	#Next to my name, view count of stars I have remaining for current month
@@ -184,16 +210,16 @@ Scenario: 08-VD-27 - Peer Kudos Dashboard - My Current Month Ranking
 	Given the page is loaded
 
 	#New Step using WebElementExtensions.getTextOfElement()
-	Then the element using element Id "my_star_collection_count" contains the text ""
+	Then the element using element Id "Panel-Last Month's Winner" contains the text ""
 	Then the element using element Id "my_star_given_count" contains the text ""
 	Then the element using element Id "my_star_remaining_count" contains the text ""
 	And I close the current page
 
 	@ignore
-Scenario: 09-VD-32 - Admin - Login
+Scenario: 76-VD-32 - Admin - Login
 	#Admin users with valid credentials (marked as Admin users - where ??) are directed to Peer Kudos Admin Employee Directory page
 	#Admin users with invalid credentials (or not marked as Admin users - where ??) -- error message is displayed
-	Given I navigate to the url "http://env03.cloud.capitissolutions.com/users/sign_in" titled "ShoppingDemo"
+	Given I navigate to the url "http://env03.cloud.capitissolutions.com" titled "ShoppingDemo"
 	When I set the text box using element id "login_email_field" with the value "admin@example.com"
 	And I set the text box using element id "login_password_field" with the value "supersecret"
 	And I click on the button using element id "login_submit_button"
@@ -201,20 +227,20 @@ Scenario: 09-VD-32 - Admin - Login
 	And the page contains the text "Catalog"
 
 	@ignore
-Scenario: 10-VD-32 - Admin - Login with Valid Credentials
+Scenario: 77-VD-24 - Peer Kudos Dashboard - Valid Admin Login Credentials
+	Given I navigate to the url "http://env03.cloud.capitissolutions.com" titled "Employee Kudos MVP"
+	When I set the text box using element id "employee_username" with the value "alex"
+	And I set the text box using element id "employee_password" with the value "alexrules"
+	And I click on the submit button labeled "Log in"
+	Then the page contains the text "Profile"
+	And the page contains the text "Kudos Received"
+
+	@ignore
+Scenario: 78-VD-32 - Admin - Login with Valid Credentials
 	Given the page is loaded
 	When I set the text box using element id "login_email_field" with the value "invalidUserId"
 	And I set the text box using element id "login_password_field" with the value "invalidPassword"
 	And I click on the button using element id "login_submit_button"
 	Then the page contains the text "Invalid Email or password."
 
-	@ignore
-Scenario: 11-VD-33 - Admin - Login with Invalid Credentials
-
-
-Scenario: 19-Peer Kudos Dashboard - Logout of the application
-	Given the page is loaded
-	When I click on the link containing the text "Sign out"
-	Then the page contains the text "You need to sign in or sign up before continuing"
-	And I close the current page
 

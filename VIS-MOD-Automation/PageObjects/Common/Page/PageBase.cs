@@ -129,5 +129,20 @@ namespace PageObjects.Common.Page
         //        {
         //            get { return Browser.Title.Contains(PageTitle); }
         //        }
+
+        public static bool ElementOfPageContainsText(string elementId, string text, string attrType)
+        {
+            //            return elementId.FindElementById().[tableRowNumber - 1].FindElements(By.TagName("td"))
+            //                .Any(t => t.FindElement(By.XPath($"//*[contains(text(), '{value}')]")).Enabled);
+            //return elementId.FindElementById().FindElement(By.XPath($".//*[contains(text(), '{text}')]")).Enabled;
+            var element = elementId.FindElementById().FindElementContainingText(text, attrType);
+            return element.Enabled && element.Displayed;
+        }
+
+        public static string GenerateRandomString(int stringLength)
+        {
+            var randomString = Guid.NewGuid().ToString("n").Substring(0, stringLength);
+            return randomString;
+        }
     }
 }
