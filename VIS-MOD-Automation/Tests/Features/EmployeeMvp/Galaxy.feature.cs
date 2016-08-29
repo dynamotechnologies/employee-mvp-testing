@@ -24,58 +24,56 @@ namespace Tests.Features.EmployeeMvp
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "NewEmployeeMvp.feature"
+#line 1 "Galaxy.feature"
 #line hidden
         
         [NUnit.Framework.TestFixtureSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "NewEmployeeMVP", "\tScenario 1:  VD-24 - Peer Kudos Dashboard - Valid Login Credentials\r\n\tEnter vali" +
-                    "d username/password combo, verify Peer Kudos Dashboard page\r\n\r\n\tScenario 2: VD-2" +
-                    "4 - Peer Kudos Dashboard - Invalid Login Credentials\r\n\tEnter invalid username/pa" +
-                    "ssword, verify error message and prompt to reenter credentials\r\n\r\n\tScenario 3: V" +
-                    "D-25 - Peer Kudos Dashboard - Employee of the Month\r\n\tVerify First & Last Name o" +
-                    "f employee with the Maximum Stars during the last month\r\n\tView count of stars di" +
-                    "splayed\r\n\tTie-Out ??? - view runner ups & count of stars for each\r\n\r\n\tScenario 4" +
-                    ": VD-26 - Peer Kudos Dashboard - Current Month Top 5 Employees Ranks\r\n\tTop 5 Ran" +
-                    "ked Employees \r\n\tIn Descending order of count of stars for current month\r\n\r\n\tSce" +
-                    "nario 5: VD-28 - Peer Kudos Dashboard - Search Employee\r\n\tSearch an employee usi" +
-                    "ng substring of First or Last Name (to select them for a kudo)\r\n\tResults are sor" +
-                    "ted by First Name\r\n\r\n\tScenario 6: VD-29 - Peer Kudos Dashboard - Assign stars to" +
-                    " employees in Top 5\r\n\tClick next to name of \"top-5\" employee and enter stars (1," +
-                    " 2, or 3 only)\r\n\r\n\tScenario 7: VD-29 - Peer Kudos Dashboard - Search Employee an" +
-                    "d Assign stars\r\n\tSearch for an employee\r\n\tClick next to name of employee in sear" +
-                    "ch results and enter stars (1, 2, or 3 only)\r\n\t\r\n\tScenario 8: VD-27 - Peer Kudos" +
-                    " Dashboard - My Current Month Ranking\r\n\tNext to my name, view count of stars I c" +
-                    "ollected for current month\r\n\tNext to my name, view count of stars I have given o" +
-                    "ut for current month\r\n\tNext to my name, view count of stars I have remaining for" +
-                    " current month\r\n\tView my Star Ranking Order \r\n\r\n\tScenario 9: VD-32 - Admin - Log" +
-                    "in with Valid Credentials\r\n\tAdmin users with valid credentials (marked as Admin " +
-                    "users - where ??) are directed to Peer Kudos Admin Employee Directory page\r\n\r\n\tS" +
-                    "cenario 10: VD-32 - Admin - Login with Invalid Credentials\r\n\tAdmin users with in" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "NewEmployeeMVP", "\tScenario 1:  Peer Kudos Dashboard - Valid Login Credentials\r\n\tEnter valid userna" +
+                    "me/password combo, verify Peer Kudos Dashboard page\r\n\r\n\tScenario 2: Peer Kudos D" +
+                    "ashboard - Invalid Login Credentials\r\n\tEnter invalid username/password, verify e" +
+                    "rror message and prompt to reenter credentials\r\n\r\n\tScenario 3: Peer Kudos Dashbo" +
+                    "ard - Employee of the Month\r\n\tVerify First & Last Name of employee with the Maxi" +
+                    "mum Stars during the last month\r\n\tView count of stars displayed\r\n\tTie-Out ??? - " +
+                    "view runner ups & count of stars for each\r\n\r\n\tScenario 4: Peer Kudos Dashboard -" +
+                    " Current Month Top 5 Employees Ranks\r\n\tTop 5 Ranked Employees \r\n\tIn Descending o" +
+                    "rder of count of stars for current month\r\n\r\n\tScenario 5: Peer Kudos Dashboard - " +
+                    "Search Employee\r\n\tSearch an employee using substring of First or Last Name (to s" +
+                    "elect them for a kudo)\r\n\tResults are sorted by First Name\r\n\r\n\tScenario 6: Peer K" +
+                    "udos Dashboard - Assign stars to employees in Top 5\r\n\tClick next to name of \"top" +
+                    "-5\" employee and enter stars (1, 2, or 3 only)\r\n\r\n\tScenario 7: Peer Kudos Dashbo" +
+                    "ard - Search Employee and Assign stars\r\n\tSearch for an employee\r\n\tClick next to " +
+                    "name of employee in search results and enter stars (1, 2, or 3 only)\r\n\t\r\n\tScenar" +
+                    "io 8: Peer Kudos Dashboard - My Current Month Ranking\r\n\tNext to my name, view co" +
+                    "unt of stars I collected for current month\r\n\tNext to my name, view count of star" +
+                    "s I have given out for current month\r\n\tNext to my name, view count of stars I ha" +
+                    "ve remaining for current month\r\n\tView my Star Ranking Order \r\n\r\n\tScenario 9: Adm" +
+                    "in - Login with Valid Credentials\r\n\tAdmin users with valid credentials (marked a" +
+                    "s Admin users - where ??) are directed to Peer Kudos Admin Employee Directory pa" +
+                    "ge\r\n\r\n\tScenario 10: Admin - Login with Invalid Credentials\r\n\tAdmin users with in" +
                     "valid credentials (or not marked as Admin users - where ??) -- error message is " +
-                    "displayed\r\n\r\n\tScenario 11: VD-33 - Admin - View Employee Directory\r\n\tAdmin can v" +
-                    "iew list of all employees sorted by name\r\n\r\n\tScenario 12: VD-35 - Admin - Update" +
-                    " Employee Info\r\n\tAdmin user can select any employee and update all info\r\n\tAdmin " +
-                    "user can save and verify updates\r\n\tUpdates must follow uniqueness for Username, " +
-                    "First & Last Name\r\n\r\n\tScenario 13: VD-34 - Admin - Add Employee\r\n\tAdmin user can" +
-                    " create a new employee - First, Last Name, Username, Password, Admin (yes/no)\r\n\r" +
-                    "\n\tScenario 14: VD-34 - Admin - Add Employee (verify duplicate errors)\r\n\tDuplicat" +
-                    "e First + Last Name combination displays errors\r\n\tUpdating to remove duplicates " +
-                    "allows to save new employee\r\n\tDuplicate Username shoudl display errors\r\n\tUpdatin" +
-                    "g to remove duplicate username allows to save\r\n\r\n\tScenario 15: VD-36 - Admin - D" +
-                    "elete Employees\r\n\tAdmin can delete an employee and accept confirmation dialog.\r\n" +
-                    "\tSearch for the deleted employee should return no records\r\n\r\n\tScenario 16: VD-38" +
-                    " - Reports: Report by Month\r\n\tAdmin selects \'Report by Month\' - select Month/Yea" +
-                    "r\r\n\tList of employees displayed with stars for that month in Descending Order fo" +
-                    "llowed by First/Last Name Asending Order\r\n\r\n\tScenario 17: VD-38 - Reports: Repor" +
-                    "t by Employee\r\n\tAdmin selects \'Report by Employee\' - enter partial employee Firs" +
-                    "t/Last Name\r\n\tSelect from result employee list\r\n\tResult displays count of stars " +
-                    "collected received each Month\r\n\r\n\tScenario 18: VD-38 - Max 10 stars can be given" +
-                    " out for current month\r\n\tVerify max 10 stars can be given out for current month\r" +
-                    "\n\tExceeding limit prompts error message\r\n\r\n\tScenario 19: Peer Kudos Dashboard - " +
-                    "Logout of the application", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    "displayed\r\n\r\n\tScenario 11: Admin - View Employee Directory\r\n\tAdmin can view list" +
+                    " of all employees sorted by name\r\n\r\n\tScenario 12: Admin - Update Employee Info\r\n" +
+                    "\tAdmin user can select any employee and update all info\r\n\tAdmin user can save an" +
+                    "d verify updates\r\n\tUpdates must follow uniqueness for Username, First & Last Nam" +
+                    "e\r\n\r\n\tScenario 13: Admin - Add Employee\r\n\tAdmin user can create a new employee -" +
+                    " First, Last Name, Username, Password, Admin (yes/no)\r\n\r\n\tScenario 14: Admin - A" +
+                    "dd Employee (verify duplicate errors)\r\n\tDuplicate First + Last Name combination " +
+                    "displays errors\r\n\tUpdating to remove duplicates allows to save new employee\r\n\tDu" +
+                    "plicate Username shoudl display errors\r\n\tUpdating to remove duplicate username a" +
+                    "llows to save\r\n\r\n\tScenario 15: Admin - Delete Employees\r\n\tAdmin can delete an em" +
+                    "ployee and accept confirmation dialog.\r\n\tSearch for the deleted employee should " +
+                    "return no records\r\n\r\n\tScenario 16: Reports: Report by Month\r\n\tAdmin selects \'Rep" +
+                    "ort by Month\' - select Month/Year\r\n\tList of employees displayed with stars for t" +
+                    "hat month in Descending Order followed by First/Last Name Asending Order\r\n\r\n\tSce" +
+                    "nario 17: Reports: Report by Employee\r\n\tAdmin selects \'Report by Employee\' - ent" +
+                    "er partial employee First/Last Name\r\n\tSelect from result employee list\r\n\tResult " +
+                    "displays count of stars collected received each Month\r\n\r\n\tScenario 18: Max 10 st" +
+                    "ars can be given out for current month\r\n\tVerify max 10 stars can be given out fo" +
+                    "r current month\r\n\tExceeding limit prompts error message\r\n\r\n\tScenario 19: Peer Ku" +
+                    "dos Dashboard - Logout of the application", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -108,284 +106,325 @@ namespace Tests.Features.EmployeeMvp
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("01-Invalid Non-Admin Login Credentials (VD-24)")]
-        public virtual void _01_InvalidNon_AdminLoginCredentialsVD_24()
+        [NUnit.Framework.DescriptionAttribute("01-Invalid Non-Admin Login Credentials")]
+        public virtual void _01_InvalidNon_AdminLoginCredentials()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01-Invalid Non-Admin Login Credentials (VD-24)", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01-Invalid Non-Admin Login Credentials", ((string[])(null)));
 #line 76
 this.ScenarioSetup(scenarioInfo);
 #line 77
  testRunner.Given("I navigate to the url \"http://env03.cloud.capitissolutions.com\" titled \"Employee " +
                     "Kudos MVP\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 78
+ testRunner.When("I set the text box using element id \"employee_username\" with the value \"max\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 79
- testRunner.When("I set the text box using element id \"employee_username\" with the value \"invalidUs" +
-                    "erid\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 80
  testRunner.And("I set the text box using element id \"employee_password\" with the value \"invalidPa" +
                     "ssword\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 81
+#line 80
  testRunner.And("I click on the submit button labeled \"Log in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 82
+#line 81
  testRunner.Then("the page contains the text \"Invalid Username or password\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("02-Valid Non-Admin Login Credentials (VD-24)")]
-        public virtual void _02_ValidNon_AdminLoginCredentialsVD_24()
+        [NUnit.Framework.DescriptionAttribute("02-Invalid Admin Login Credentials")]
+        public virtual void _02_InvalidAdminLoginCredentials()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02-Valid Non-Admin Login Credentials (VD-24)", ((string[])(null)));
-#line 84
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02-Invalid Admin Login Credentials", ((string[])(null)));
+#line 83
 this.ScenarioSetup(scenarioInfo);
-#line 85
+#line 84
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 85
+ testRunner.When("I set the text box using element id \"employee_username\" with the value \"alex\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 86
- testRunner.When("I set the text box using element id \"employee_username\" with the value \"max\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I set the text box using element id \"employee_password\" with the value \"invalidPa" +
+                    "ssword\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 87
+ testRunner.And("I click on the submit button labeled \"Log in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 88
+ testRunner.Then("the page contains the text \"Invalid Username or password\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("03-Valid Non-Admin Login Credentials")]
+        public virtual void _03_ValidNon_AdminLoginCredentials()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03-Valid Non-Admin Login Credentials", ((string[])(null)));
+#line 90
+this.ScenarioSetup(scenarioInfo);
+#line 91
+ testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 92
+ testRunner.When("I set the text box using element id \"employee_username\" with the value \"max\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 93
  testRunner.And("I set the text box using element id \"employee_password\" with the value \"maximumax" +
                     "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 88
+#line 94
  testRunner.And("I click on the submit button labeled \"Log in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 89
+#line 95
  testRunner.Then("the page contains the text \"Signed in successfully\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("03-Admin-Validate Profile fields")]
+        [NUnit.Framework.DescriptionAttribute("04-Logout as a Regular User")]
+        public virtual void _04_LogoutAsARegularUser()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04-Logout as a Regular User", ((string[])(null)));
+#line 97
+this.ScenarioSetup(scenarioInfo);
+#line 98
+ testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 99
+ testRunner.When("I click on the link containing the text \"Sign out\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 100
+ testRunner.Then("the page contains the text \"You need to sign in or sign up before continuing\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("05-Valid Admin Login Credentials")]
+        public virtual void _05_ValidAdminLoginCredentials()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("05-Valid Admin Login Credentials", ((string[])(null)));
+#line 102
+this.ScenarioSetup(scenarioInfo);
+#line 103
+ testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 104
+ testRunner.When("I set the text box using element id \"employee_username\" with the value \"alex\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 105
+ testRunner.And("I set the text box using element id \"employee_password\" with the value \"alexrules" +
+                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 106
+ testRunner.And("I click on the submit button labeled \"Log in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 107
+ testRunner.Then("the page contains the text \"Signed in successfully\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("06-Non-Admin-Validate Profile fields")]
         [NUnit.Framework.TestCaseAttribute("Name", new string[0])]
         [NUnit.Framework.TestCaseAttribute("Kudos Received", new string[0])]
         [NUnit.Framework.TestCaseAttribute("Kudos to Give", new string[0])]
         [NUnit.Framework.TestCaseAttribute("Current Ranking", new string[0])]
-        public virtual void _03_Admin_ValidateProfileFields(string textOnPage, string[] exampleTags)
+        public virtual void _06_Non_Admin_ValidateProfileFields(string textOnPage, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03-Admin-Validate Profile fields", exampleTags);
-#line 91
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("06-Non-Admin-Validate Profile fields", exampleTags);
+#line 109
 this.ScenarioSetup(scenarioInfo);
-#line 92
+#line 110
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 93
+#line 111
  testRunner.Then(string.Format("the page contains the text {0} from the following table", textOnPage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("04-Admin-Search Employee Table with Full First Name")]
-        public virtual void _04_Admin_SearchEmployeeTableWithFullFirstName()
+        [NUnit.Framework.DescriptionAttribute("06-Non-Admin-Search Employee Table with Full First Name")]
+        public virtual void _06_Non_Admin_SearchEmployeeTableWithFullFirstName()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04-Admin-Search Employee Table with Full First Name", ((string[])(null)));
-#line 102
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("06-Non-Admin-Search Employee Table with Full First Name", ((string[])(null)));
+#line 120
 this.ScenarioSetup(scenarioInfo);
-#line 103
+#line 121
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 104
+#line 122
  testRunner.When("I set the text box using name attribute \"q\" with the value \"Max\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 105
+#line 123
  testRunner.And("I click on the submit button containing the text \"Search!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 106
+#line 124
  testRunner.And("I access the table using tag \"table\" attribute type \"id\" attribute value \"Give-Ku" +
                     "dos-Table\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 107
+#line 125
  testRunner.Then("table row number \"2\" column number \"1\" contains the value \"Max\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 108
+#line 126
  testRunner.And("table row number \"2\" column number \"2\" contains the value \"Brailovsky\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("05-Admin-Search Employee Table with Partial Name")]
-        public virtual void _05_Admin_SearchEmployeeTableWithPartialName()
+        [NUnit.Framework.DescriptionAttribute("07-Non-Admin-Search Employee Table with Partial Name")]
+        public virtual void _07_Non_Admin_SearchEmployeeTableWithPartialName()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("05-Admin-Search Employee Table with Partial Name", ((string[])(null)));
-#line 110
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("07-Non-Admin-Search Employee Table with Partial Name", ((string[])(null)));
+#line 128
 this.ScenarioSetup(scenarioInfo);
-#line 111
+#line 129
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 112
+#line 130
  testRunner.When("I set the text box using name attribute \"q\" with the value \"a\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 113
+#line 131
  testRunner.And("I click on the submit button containing the text \"Search!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 114
+#line 132
  testRunner.And("I access the table using tag \"table\" attribute type \"id\" attribute value \"Give-Ku" +
                     "dos-Table\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 115
+#line 133
  testRunner.Then("the count of rows in the table is greater than \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("06-Admin-Peer Kudos Dashboard - Current Month Top 5 Employees Ranks (VD-26)")]
-        public virtual void _06_Admin_PeerKudosDashboard_CurrentMonthTop5EmployeesRanksVD_26()
+        [NUnit.Framework.DescriptionAttribute("08-Non-Admin-Peer Kudos Dashboard - Current Month Top 5 Employees Ranks")]
+        public virtual void _08_Non_Admin_PeerKudosDashboard_CurrentMonthTop5EmployeesRanks()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("06-Admin-Peer Kudos Dashboard - Current Month Top 5 Employees Ranks (VD-26)", ((string[])(null)));
-#line 117
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("08-Non-Admin-Peer Kudos Dashboard - Current Month Top 5 Employees Ranks", ((string[])(null)));
+#line 135
 this.ScenarioSetup(scenarioInfo);
-#line 119
+#line 137
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 120
+#line 138
  testRunner.When("I access the table using element id \"leaderboard-table\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 121
+#line 139
  testRunner.Then("the count of rows in the table is greater than \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 124
+#line 142
  testRunner.And("table row number \"2\" column number \"1\" contains the value \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 125
+#line 143
  testRunner.And("table row number \"3\" column number \"1\" contains the value \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("07-Assign stars to employees displayed in Search Results (VD-29)")]
-        public virtual void _07_AssignStarsToEmployeesDisplayedInSearchResultsVD_29()
+        [NUnit.Framework.DescriptionAttribute("07-Non-Admin-Assign stars to employees displayed in Search Results")]
+        public virtual void _07_Non_Admin_AssignStarsToEmployeesDisplayedInSearchResults()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("07-Assign stars to employees displayed in Search Results (VD-29)", ((string[])(null)));
-#line 127
-this.ScenarioSetup(scenarioInfo);
-#line 128
- testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 129
- testRunner.When("I set the text box using name attribute \"q\" with the value \"bella\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 130
- testRunner.And("I click on the submit button containing the text \"Search!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 131
- testRunner.And("I access the table using tag \"table\" attribute type \"id\" attribute value \"Give-Ku" +
-                    "dos-Table\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 132
- testRunner.And("I save the data from table row number \"2\" column number \"3\" into the variable \"in" +
-                    "itialKudos\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 134
- testRunner.And("I click on the element using tag \"span\" attribute type \"data-kudos-amount\" attrib" +
-                    "ute value \"1\" in row number \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 135
- testRunner.And("I set the text box using element id \"kudo_transaction\" with the value \"Awesome!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 136
- testRunner.And("I click on the button using class name \"give-btn\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("08-Logout as a Regular User")]
-        public virtual void _08_LogoutAsARegularUser()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("08-Logout as a Regular User", ((string[])(null)));
-#line 139
-this.ScenarioSetup(scenarioInfo);
-#line 140
- testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 141
- testRunner.When("I click on the link containing the text \"Sign out\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 142
- testRunner.Then("the page contains the text \"You need to sign in or sign up before continuing\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 143
- testRunner.And("I close the current page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("09-Admin Login Credentials (VD-32)")]
-        public virtual void _09_AdminLoginCredentialsVD_32()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("09-Admin Login Credentials (VD-32)", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("07-Non-Admin-Assign stars to employees displayed in Search Results", ((string[])(null)));
 #line 145
 this.ScenarioSetup(scenarioInfo);
 #line 146
+ testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 147
+ testRunner.When("I set the text box using name attribute \"q\" with the value \"Max\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 148
+ testRunner.And("I click on the submit button containing the text \"Search!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 149
+ testRunner.And("I search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 150
+ testRunner.And("I access the table using tag \"table\" attribute type \"id\" attribute value \"Give-Ku" +
+                    "dos-Table\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 151
+ testRunner.And("I save the data from table row number \"2\" column number \"3\" into the variable \"in" +
+                    "itialKudos\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 153
+ testRunner.And("I click on the element using tag \"span\" attribute type \"data-kudos-amount\" attrib" +
+                    "ute value \"1\" in row number \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 154
+ testRunner.And("I set the text box using element id \"kudo_transaction\" with the value \"Awesome!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("09-Admin Login Credentials")]
+        public virtual void _09_AdminLoginCredentials()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("09-Admin Login Credentials", ((string[])(null)));
+#line 158
+this.ScenarioSetup(scenarioInfo);
+#line 159
  testRunner.Given("I navigate to the url \"http://env03.cloud.capitissolutions.com\" titled \"Employee " +
                     "Kudos MVP\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 148
+#line 161
  testRunner.When("I set the text box using element id \"employee_username\" with the value \"alex\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 149
+#line 162
  testRunner.And("I set the text box using element id \"employee_password\" with the value \"alexrules" +
                     "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 150
+#line 163
  testRunner.And("I click on the submit button labeled \"Log in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 151
+#line 164
  testRunner.Then("the page contains the text \"Signed in successfully\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("10-Manage Employees")]
-        public virtual void _10_ManageEmployees()
+        [NUnit.Framework.DescriptionAttribute("10-Admin-Manage Employees")]
+        public virtual void _10_Admin_ManageEmployees()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("10-Manage Employees", ((string[])(null)));
-#line 153
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("10-Admin-Manage Employees", ((string[])(null)));
+#line 166
 this.ScenarioSetup(scenarioInfo);
-#line 154
+#line 167
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 155
+#line 168
  testRunner.When("I click on the link containing the text \"Manage Employees\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 156
+#line 169
  testRunner.Then("the page contains the text \"Admin Dashboard\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("11-Add New Employee")]
-        public virtual void _11_AddNewEmployee()
+        [NUnit.Framework.DescriptionAttribute("11-Admin-Add New Employee")]
+        public virtual void _11_Admin_AddNewEmployee()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("11-Add New Employee", ((string[])(null)));
-#line 158
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("11-Admin-Add New Employee", ((string[])(null)));
+#line 171
 this.ScenarioSetup(scenarioInfo);
-#line 159
+#line 172
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 160
+#line 173
  testRunner.When("I click on the link containing the text \"Add New Employee\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 161
+#line 174
  testRunner.And("the page contains the text \"Add New Employee\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 164
+#line 177
  testRunner.And("I save a random string with \"8\" characters into the variable \"username\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 165
+#line 178
  testRunner.And("I set the text box using element id \"employee_username\" with the value stored in " +
                     "the variable \"username\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 168
+#line 181
  testRunner.And("I set the text box using element id \"employee_password\" with the value \"Autotest1" +
                     "23!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 169
+#line 182
  testRunner.And("I set the text box using element id \"employee_password_confirmation\" with the val" +
                     "ue \"Autotest123!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 172
+#line 185
  testRunner.And("I append the following strings \"[username],@,test.com\" and save the result into t" +
                     "he variable \"emailAddress\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 173
+#line 186
  testRunner.And("I set the text box using element id \"employee_email\" with the value stored in the" +
                     " variable \"emailAddress\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 175
+#line 188
  testRunner.And("I set the text box using element id \"employee_first_name\" with the value \"TestUse" +
                     "r-FN\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 176
+#line 189
  testRunner.And("I set the text box using element id \"employee_last_name\" with the value \"User-LN\"" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 177
+#line 190
  testRunner.And("I set the checkbox with element id \"employee_is_admin\" to \"true\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 178
+#line 191
  testRunner.And("I click on the submit button labeled \"Save changes\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 179
+#line 192
  testRunner.Then("the page contains the text \"Employee was successfully created\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("72-VD-25 - Peer Kudos Dashboard - Employee of the Previous Month")]
+        [NUnit.Framework.DescriptionAttribute("72-Peer Kudos Dashboard - Employee of the Previous Month")]
         [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
-        public virtual void _72_VD_25_PeerKudosDashboard_EmployeeOfThePreviousMonth()
+        public virtual void _72_PeerKudosDashboard_EmployeeOfThePreviousMonth()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("72-VD-25 - Peer Kudos Dashboard - Employee of the Previous Month", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("72-Peer Kudos Dashboard - Employee of the Previous Month", new string[] {
                         "ignore"});
-#line 183
+#line 196
 this.ScenarioSetup(scenarioInfo);
-#line 185
+#line 198
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 186
+#line 199
  testRunner.Then("the page using element id \"Panel-Last Month\'s Winner\" and attribute type \"div\" co" +
                     "ntains the text \"Alex Duan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -393,123 +432,123 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("73-VD-29 - Peer Kudos Dashboard - Assign stars to employees in Top 5")]
+        [NUnit.Framework.DescriptionAttribute("73-Peer Kudos Dashboard - Assign stars to employees in Top 5")]
         [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
-        public virtual void _73_VD_29_PeerKudosDashboard_AssignStarsToEmployeesInTop5()
+        public virtual void _73_PeerKudosDashboard_AssignStarsToEmployeesInTop5()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("73-VD-29 - Peer Kudos Dashboard - Assign stars to employees in Top 5", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("73-Peer Kudos Dashboard - Assign stars to employees in Top 5", new string[] {
                         "ignore"});
-#line 190
+#line 203
 this.ScenarioSetup(scenarioInfo);
-#line 192
+#line 205
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 193
+#line 206
  testRunner.When("I save the data using element id \"top_1_of_5_employee\" into the variable \"current" +
                     "StarCount\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 194
+#line 207
  testRunner.And("I click on the button using element id \"3-star\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("75-VD-27 - Peer Kudos Dashboard - My Current Month Ranking")]
+        [NUnit.Framework.DescriptionAttribute("75-Peer Kudos Dashboard - My Current Month Ranking")]
         [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
-        public virtual void _75_VD_27_PeerKudosDashboard_MyCurrentMonthRanking()
+        public virtual void _75_PeerKudosDashboard_MyCurrentMonthRanking()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("75-VD-27 - Peer Kudos Dashboard - My Current Month Ranking", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("75-Peer Kudos Dashboard - My Current Month Ranking", new string[] {
                         "ignore"});
-#line 204
+#line 217
 this.ScenarioSetup(scenarioInfo);
-#line 209
+#line 222
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 212
+#line 225
  testRunner.Then("the element using element Id \"Panel-Last Month\'s Winner\" contains the text \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 213
+#line 226
  testRunner.Then("the element using element Id \"my_star_given_count\" contains the text \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 214
+#line 227
  testRunner.Then("the element using element Id \"my_star_remaining_count\" contains the text \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 215
+#line 228
  testRunner.And("I close the current page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("76-VD-32 - Admin - Login")]
+        [NUnit.Framework.DescriptionAttribute("76-Admin - Login")]
         [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
-        public virtual void _76_VD_32_Admin_Login()
+        public virtual void _76_Admin_Login()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("76-VD-32 - Admin - Login", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("76-Admin - Login", new string[] {
                         "ignore"});
-#line 218
+#line 231
 this.ScenarioSetup(scenarioInfo);
-#line 221
+#line 234
  testRunner.Given("I navigate to the url \"http://env03.cloud.capitissolutions.com\" titled \"ShoppingD" +
                     "emo\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 222
+#line 235
  testRunner.When("I set the text box using element id \"login_email_field\" with the value \"admin@exa" +
                     "mple.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 223
+#line 236
  testRunner.And("I set the text box using element id \"login_password_field\" with the value \"supers" +
                     "ecret\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 224
+#line 237
  testRunner.And("I click on the button using element id \"login_submit_button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 225
+#line 238
  testRunner.Then("the page title is \"ShoppingDemo\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 226
+#line 239
  testRunner.And("the page contains the text \"Catalog\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("77-VD-24 - Peer Kudos Dashboard - Valid Admin Login Credentials")]
+        [NUnit.Framework.DescriptionAttribute("77-Peer Kudos Dashboard - Valid Admin Login Credentials")]
         [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
-        public virtual void _77_VD_24_PeerKudosDashboard_ValidAdminLoginCredentials()
+        public virtual void _77_PeerKudosDashboard_ValidAdminLoginCredentials()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("77-VD-24 - Peer Kudos Dashboard - Valid Admin Login Credentials", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("77-Peer Kudos Dashboard - Valid Admin Login Credentials", new string[] {
                         "ignore"});
-#line 229
+#line 242
 this.ScenarioSetup(scenarioInfo);
-#line 230
+#line 243
  testRunner.Given("I navigate to the url \"http://env03.cloud.capitissolutions.com\" titled \"Employee " +
                     "Kudos MVP\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 231
+#line 244
  testRunner.When("I set the text box using element id \"employee_username\" with the value \"alex\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 232
+#line 245
  testRunner.And("I set the text box using element id \"employee_password\" with the value \"alexrules" +
                     "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 233
+#line 246
  testRunner.And("I click on the submit button labeled \"Log in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 234
+#line 247
  testRunner.Then("the page contains the text \"Profile\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 235
+#line 248
  testRunner.And("the page contains the text \"Kudos Received\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("78-VD-32 - Admin - Login with Valid Credentials")]
+        [NUnit.Framework.DescriptionAttribute("78-Admin - Login with Valid Credentials")]
         [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
-        public virtual void _78_VD_32_Admin_LoginWithValidCredentials()
+        public virtual void _78_Admin_LoginWithValidCredentials()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("78-VD-32 - Admin - Login with Valid Credentials", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("78-Admin - Login with Valid Credentials", new string[] {
                         "ignore"});
-#line 238
+#line 251
 this.ScenarioSetup(scenarioInfo);
-#line 239
+#line 252
  testRunner.Given("the page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 240
+#line 253
  testRunner.When("I set the text box using element id \"login_email_field\" with the value \"invalidUs" +
                     "erId\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 241
+#line 254
  testRunner.And("I set the text box using element id \"login_password_field\" with the value \"invali" +
                     "dPassword\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 242
+#line 255
  testRunner.And("I click on the button using element id \"login_submit_button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 243
+#line 256
  testRunner.Then("the page contains the text \"Invalid Email or password.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

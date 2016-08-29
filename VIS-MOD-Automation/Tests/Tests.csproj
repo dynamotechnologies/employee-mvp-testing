@@ -80,17 +80,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EmployeeMvp.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\EmployeeMvp\NewEmployeeMvp.feature.cs">
+    <Compile Include="Features\EmployeeMvp\Galaxy.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NewEmployeeMvp.feature</DependentUpon>
+      <DependentUpon>Galaxy.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\ShoppingCart\OnlineShoppingCart.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OnlineShoppingCart.feature</DependentUpon>
-    </Compile>
-    <Compile Include="Features\ShoppingCart\ShoppingCart.cs" />
     <Compile Include="Helpers\WebElementAssertions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -102,13 +96,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>EmployeeMvp.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\EmployeeMvp\NewEmployeeMvp.feature">
+    <None Include="Features\EmployeeMvp\Galaxy.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>NewEmployeeMvp.feature.cs</LastGenOutput>
-    </None>
-    <None Include="Features\ShoppingCart\OnlineShoppingCart.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>OnlineShoppingCart.feature.cs</LastGenOutput>
+      <LastGenOutput>Galaxy.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
