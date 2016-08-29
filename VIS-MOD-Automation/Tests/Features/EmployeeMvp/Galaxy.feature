@@ -108,8 +108,7 @@ Scenario: 03-Valid Admin Login Credentials
 	When I set the text box using element id "employee_email" with the value "alex@abc.com"
 	And I set the text box using element id "employee_password" with the value "alexrules"
 	And I click on the submit button labeled "Log in"
-	# Then the page title is "Give a Point"
-	Then the page contains the text "Profile"
+	Then the page contains the text "Admin Dashboard"
 
 Scenario: 04-Logout as an Admin User
 	Given the page is loaded
@@ -121,13 +120,26 @@ Scenario: 05-Valid Non-Admin Login Credentials
 	When I set the text box using element id "employee_email" with the value "chris@abc.com"
 	And I set the text box using element id "employee_password" with the value "letmein"
 	And I click on the submit button labeled "Log in"
-	Then the page title is "Employee Kudo - MVP"
 	Then the page contains the text "Profile"
 	
+Scenario: 06-User Help Text on Page
+	#Given I navigate to the url "http://env03.cloud.capitissolutions.com" titled "Employee Kudos MVP"
+	#When I set the text box using element id "employee_email" with the value "chris@abc.com"
+	#And I set the text box using element id "employee_password" with the value "letmein"
+	#And I click on the submit button labeled "Log in"
+	Given the page is loaded
+	Then the page contains the text "You can give someone up to 1 Kudo per day"
+	And the page contains the text "Click on the star to the right of your colleagues name in the table to give them a Kudo"
+
+Scenario: 07-User Help Link
+	Given the page is loaded
+	When I click on the link containing the text "Help"
+	Then the page contains the text "This is user help text"
+
 
 
 	@ignore
-Scenario: 06-Give a point to another user
+Scenario: 16-Give a point to another user
 	Given the page is loaded
 
 	When I upload file "UploadFiles\test.gif" using element id ""
@@ -136,16 +148,13 @@ Scenario: 06-Give a point to another user
 	Then the page title is "Give a Point" 
 
 	@ignore
-Scenario: 07-Add New User
+Scenario: 17-Add New User
 	Given the page is loaded
 
-	@ignore
-Scenario: 08-User Help
-	Given the page is loaded
 
 	
 	@ignore
-Scenario: 09-Disable User Account
+Scenario: 19-Disable User Account
 	Given the page is loaded
 
 
@@ -159,7 +168,7 @@ Scenario: 10-Enable User Account
 
 	#========================================================================
 	@ignore
-Scenario Outline: 06-Non-Admin-Validate Profile fields
+Scenario Outline: 16-Non-Admin-Validate Profile fields
 	Given the page is loaded
 	Then the page contains the text <TextOnPage> from the following table
 
@@ -171,7 +180,7 @@ Scenario Outline: 06-Non-Admin-Validate Profile fields
 	| Current Ranking |
 	
 	@ignore
-Scenario: 06-Non-Admin-Search Employee Table with Full First Name
+Scenario: 16-Non-Admin-Search Employee Table with Full First Name
 	Given the page is loaded
 	When I set the text box using name attribute "q" with the value "Max"
 	And I click on the submit button containing the text "Search!"
@@ -180,7 +189,7 @@ Scenario: 06-Non-Admin-Search Employee Table with Full First Name
 	And table row number "2" column number "2" contains the value "Brailovsky"
 
 	@ignore
-Scenario: 07-Non-Admin-Search Employee Table with Partial Name
+Scenario: 17-Non-Admin-Search Employee Table with Partial Name
 	Given the page is loaded
 	When I set the text box using name attribute "q" with the value "a"
 	And I click on the submit button containing the text "Search!"
@@ -188,7 +197,7 @@ Scenario: 07-Non-Admin-Search Employee Table with Partial Name
 	Then the count of rows in the table is greater than "1"
 
 	@ignore
-Scenario: 08-Non-Admin-Peer Kudos Dashboard - Current Month Top 5 Employees Ranks
+Scenario: 18-Non-Admin-Peer Kudos Dashboard - Current Month Top 5 Employees Ranks
 	# Top 5 Ranked Employees 
 	Given the page is loaded
 	When I access the table using element id "leaderboard-table"
@@ -199,7 +208,7 @@ Scenario: 08-Non-Admin-Peer Kudos Dashboard - Current Month Top 5 Employees Rank
 	And table row number "3" column number "1" contains the value "2"
 
 	@ignore
-Scenario: 07-Non-Admin-Assign stars to employees displayed in Search Results
+Scenario: 17-Non-Admin-Assign stars to employees displayed in Search Results
 	Given the page is loaded
 	When I set the text box using name attribute "q" with the value "Max"
 	And I click on the submit button containing the text "Search!"
