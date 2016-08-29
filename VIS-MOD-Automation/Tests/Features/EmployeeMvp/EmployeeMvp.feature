@@ -1,4 +1,5 @@
-﻿Feature: EmployeeMVP
+﻿@ignore
+Feature: EmployeeMVP
 	Scenario 1:  VD-24 - Peer Kudos Dashboard - Valid Login Credentials
 	Enter valid username/password combo, verify Peer Kudos Dashboard page
 
@@ -73,6 +74,7 @@
 
 	Scenario 19: Peer Kudos Dashboard - Logout of the application
 
+	
 Scenario: 01-VD-24 - Peer Kudos Dashboard - Valid Login Credentials
 	Given I navigate to the url "http://env03.cloud.capitissolutions.com" titled "Employee Kudos MVP"
 	When I set the text box using element id "employee_username" with the value "alex"

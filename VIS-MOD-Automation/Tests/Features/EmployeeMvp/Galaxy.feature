@@ -1,4 +1,20 @@
-﻿Feature: NewEmployeeMVP
+﻿Feature: Galaxy App
+	01-Invalid Non-Admin Login Credentials
+	
+	02-Invalid Admin Login Credentials
+
+	03-Valid Non-Admin Login Credentials
+
+	04-Logout as a Regular User
+
+	05-Valid Admin Login Credentials
+
+	06-Give a point to another user
+
+	07-Add New User
+
+
+
 	Scenario 1:  Peer Kudos Dashboard - Valid Login Credentials
 	Enter valid username/password combo, verify Peer Kudos Dashboard page
 
@@ -75,37 +91,74 @@
 
 Scenario: 01-Invalid Non-Admin Login Credentials
 	Given I navigate to the url "http://env03.cloud.capitissolutions.com" titled "Employee Kudos MVP"
-	When I set the text box using element id "employee_username" with the value "max"
+	When I set the text box using element id "employee_email" with the value "chris@abc.com"
 	And I set the text box using element id "employee_password" with the value "invalidPassword"
 	And I click on the submit button labeled "Log in"
-	Then the page contains the text "Invalid Username or password"
+	Then the page contains the text "Invalid Email or password"
 
 Scenario: 02-Invalid Admin Login Credentials
 	Given the page is loaded
-	When I set the text box using element id "employee_username" with the value "alex"
+	When I set the text box using element id "employee_email" with the value "alex@abc.com"
 	And I set the text box using element id "employee_password" with the value "invalidPassword"
 	And I click on the submit button labeled "Log in"
-	Then the page contains the text "Invalid Username or password"
+	Then the page contains the text "Invalid Email or password"
 
-Scenario: 03-Valid Non-Admin Login Credentials 
+Scenario: 03-Valid Admin Login Credentials 
 	Given the page is loaded
-	When I set the text box using element id "employee_username" with the value "max"
-	And I set the text box using element id "employee_password" with the value "maximumax"
+	When I set the text box using element id "employee_email" with the value "alex@abc.com"
+	And I set the text box using element id "employee_password" with the value "alexrules"
 	And I click on the submit button labeled "Log in"
-	Then the page contains the text "Signed in successfully"
-	
-Scenario: 04-Logout as a Regular User
+	# Then the page title is "Give a Point"
+	Then the page contains the text "Profile"
+
+Scenario: 04-Logout as an Admin User
 	Given the page is loaded
 	When I click on the link containing the text "Sign out"
 	Then the page contains the text "You need to sign in or sign up before continuing"
-	
-Scenario: 05-Valid Admin Login Credentials 
-	Given the page is loaded
-	When I set the text box using element id "employee_username" with the value "alex"
-	And I set the text box using element id "employee_password" with the value "alexrules"
-	And I click on the submit button labeled "Log in"
-	Then the page contains the text "Signed in successfully"
 
+Scenario: 05-Valid Non-Admin Login Credentials 
+	Given the page is loaded
+	When I set the text box using element id "employee_email" with the value "chris@abc.com"
+	And I set the text box using element id "employee_password" with the value "letmein"
+	And I click on the submit button labeled "Log in"
+	Then the page title is "Employee Kudo - MVP"
+	Then the page contains the text "Profile"
+	
+
+
+	@ignore
+Scenario: 06-Give a point to another user
+	Given the page is loaded
+
+	When I upload file "UploadFiles\test.gif" using element id ""
+
+	# User remains in Give A Point page after awarding points
+	Then the page title is "Give a Point" 
+
+	@ignore
+Scenario: 07-Add New User
+	Given the page is loaded
+
+	@ignore
+Scenario: 08-User Help
+	Given the page is loaded
+
+	
+	@ignore
+Scenario: 09-Disable User Account
+	Given the page is loaded
+
+
+	@ignore
+Scenario: 10-Enable User Account
+	Given the page is loaded
+
+
+
+	
+
+	#========================================================================
+	@ignore
 Scenario Outline: 06-Non-Admin-Validate Profile fields
 	Given the page is loaded
 	Then the page contains the text <TextOnPage> from the following table
@@ -117,6 +170,7 @@ Scenario Outline: 06-Non-Admin-Validate Profile fields
 	| Kudos to Give   |
 	| Current Ranking |
 	
+	@ignore
 Scenario: 06-Non-Admin-Search Employee Table with Full First Name
 	Given the page is loaded
 	When I set the text box using name attribute "q" with the value "Max"
@@ -125,6 +179,7 @@ Scenario: 06-Non-Admin-Search Employee Table with Full First Name
 	Then table row number "2" column number "1" contains the value "Max"
 	And table row number "2" column number "2" contains the value "Brailovsky"
 
+	@ignore
 Scenario: 07-Non-Admin-Search Employee Table with Partial Name
 	Given the page is loaded
 	When I set the text box using name attribute "q" with the value "a"
@@ -132,6 +187,7 @@ Scenario: 07-Non-Admin-Search Employee Table with Partial Name
 	And I access the table using tag "table" attribute type "id" attribute value "Give-Kudos-Table"
 	Then the count of rows in the table is greater than "1"
 
+	@ignore
 Scenario: 08-Non-Admin-Peer Kudos Dashboard - Current Month Top 5 Employees Ranks
 	# Top 5 Ranked Employees 
 	Given the page is loaded
@@ -142,6 +198,7 @@ Scenario: 08-Non-Admin-Peer Kudos Dashboard - Current Month Top 5 Employees Rank
 	And table row number "2" column number "1" contains the value "1"
 	And table row number "3" column number "1" contains the value "2"
 
+	@ignore
 Scenario: 07-Non-Admin-Assign stars to employees displayed in Search Results
 	Given the page is loaded
 	When I set the text box using name attribute "q" with the value "Max"
@@ -155,19 +212,13 @@ Scenario: 07-Non-Admin-Assign stars to employees displayed in Search Results
 	#And I click on the button using class name "give-btn"
 	#Then table row number "2" column number "3" contains the value stored in the variable "updatedKudos"
 	
-Scenario: 09-Admin Login Credentials
-	Given I navigate to the url "http://env03.cloud.capitissolutions.com" titled "Employee Kudos MVP"
-	# Given I navigate to the url "https://employee-mvp.herokuapp.com" titled "Employee Kudos MVP"
-	When I set the text box using element id "employee_username" with the value "alex"
-	And I set the text box using element id "employee_password" with the value "alexrules"
-	And I click on the submit button labeled "Log in"
-	Then the page contains the text "Signed in successfully"
-
+	@ignore
 Scenario: 10-Admin-Manage Employees
 	Given the page is loaded
 	When I click on the link containing the text "Manage Employees"
 	Then the page contains the text "Admin Dashboard"
 
+	@ignore
 Scenario: 11-Admin-Add New Employee
 	Given the page is loaded
 	When I click on the link containing the text "Add New Employee"
@@ -175,8 +226,8 @@ Scenario: 11-Admin-Add New Employee
 
 	# Generate Unique User Name
 	And I save a random string with "8" characters into the variable "username"
-	And I set the text box using element id "employee_username" with the value stored in the variable "username"
-	#And I set the text box using element id "employee_username" with the value "testuser"
+	And I set the text box using element id "employee_email" with the value stored in the variable "username"
+	#And I set the text box using element id "employee_email" with the value "testuser"
 	
 	And I set the text box using element id "employee_password" with the value "Autotest123!"
 	And I set the text box using element id "employee_password_confirmation" with the value "Autotest123!"
@@ -241,7 +292,7 @@ Scenario: 76-Admin - Login
 	@ignore
 Scenario: 77-Peer Kudos Dashboard - Valid Admin Login Credentials
 	Given I navigate to the url "http://env03.cloud.capitissolutions.com" titled "Employee Kudos MVP"
-	When I set the text box using element id "employee_username" with the value "alex"
+	When I set the text box using element id "employee_email" with the value "alex"
 	And I set the text box using element id "employee_password" with the value "alexrules"
 	And I click on the submit button labeled "Log in"
 	Then the page contains the text "Profile"
