@@ -123,10 +123,6 @@ Scenario: 05-Valid Non-Admin Login Credentials
 	Then the page contains the text "Profile"
 	
 Scenario: 06-User Help Text on Page
-	#Given I navigate to the url "http://env03.cloud.capitissolutions.com" titled "Employee Kudos MVP"
-	#When I set the text box using element id "employee_email" with the value "chris@abc.com"
-	#And I set the text box using element id "employee_password" with the value "letmein"
-	#And I click on the submit button labeled "Log in"
 	Given the page is loaded
 	Then the page contains the text "You can give someone up to 1 Kudo per day"
 	And the page contains the text "Click on the star to the right of your colleagues name in the table to give them a Kudo"
@@ -135,8 +131,32 @@ Scenario: 07-User Help Link
 	Given the page is loaded
 	When I click on the link containing the text "Help"
 	Then the page contains the text "This is user help text"
+	And I close the current page
 
+Scenario: 08-Admin Search
+	Given I navigate to the url "http://env03.cloud.capitissolutions.com" titled "Employee Kudos MVP"
+	When I set the text box using element id "employee_email" with the value "alex@abc.com"
+	And I set the text box using element id "employee_password" with the value "alexrules"
+	And I click on the submit button labeled "Log in"
+	And I set the text box using element id "employee-search" with the value "bella"
+	And I click on the submit button containing the text "Search!"
+	And I access the table using tag "table" attribute type "id" attribute value "employee-table"
+	Then table row number "2" column number "1" contains the value "bella.trenkova@variq.com"
 
+Scenario: 09-Deactivate User
+	Given the page is loaded
+	When I click on the link containing the text "Edit"
+	And I set the checkbox with element id "employee_is_active" to "false"
+	And I click on the submit button labeled "Save changes"
+
+Scenario: 10-FAQ
+	Given I navigate to the url "http://env03.cloud.capitissolutions.com" titled "Employee Kudos MVP"
+	When I set the text box using element id "employee_email" with the value "alex@abc.com"
+	And I set the text box using element id "employee_password" with the value "alexrules"
+	And I click on the submit button labeled "Log in"
+	When I click on the link containing the text "FAQ"
+	Then the page contains the text "This is your FAQ text"
+	
 
 	@ignore
 Scenario: 16-Give a point to another user
